@@ -1,0 +1,26 @@
+{
+  "logo": {
+    "primary": "web/public/brand/logo.png",
+    "white": "web/public/brand/logo-white.png"
+  },
+  "hero": "web/public/brand/hero.jpg",
+  "products": [
+    "web/public/brand/vanilla-cake.jpg",
+    "web/public/brand/chocolate-cake.jpg",
+    "web/public/brand/red-velvet.jpg",
+    "web/public/brand/honey-cake.jpg",
+    "web/public/brand/cupcakes.jpg",
+    "web/public/brand/strawberry-shortcake.jpg"
+  ],
+  "social": {
+    "instagram": "web/public/brand/social-ig.jpg",
+    "facebook": "web/public/brand/social-fb.jpg"
+  },
+  "colors": {
+    "sky_blue": "#00AEEA",
+    "chocolate_brown": "#6B3A1E",
+    "vanilla_cream": "#FFF7EA",
+    "white": "#FFFFFF",
+    "berry_accent": "#E94B7B"
+  }
+}
