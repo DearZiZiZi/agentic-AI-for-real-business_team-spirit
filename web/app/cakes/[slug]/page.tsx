@@ -1,0 +1,98 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import catalog from "@/data/catalog.json";
+
+interface ProductPageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export function generateStaticParams() {
+  return catalog.map((cake) => ({ slug: cake.slug }));
+}
+
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { slug } = await params;
+  const cake = catalog.find((c) => c.slug === slug);
+
+  if (!cake) return notFound();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["Product", "MenuItem"],
+    name: cake.name,
+    description: cake.description,
+    category: cake.category,
+    offers: cake.variations.map((v) => ({
+      "@type": "Offer",
+      name: v.size,
+      price: (v.price_cents / 100).toFixed(2),
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    })),
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <Link
+        href="/cakes"
+        className="text-sky hover:underline text-sm mb-6 inline-block"
+      >
+        ← Back to All Cakes
+      </Link>
+
+      <div className="bg-white rounded-xl shadow-md overflow-hidden">
+        <div className="h-64 bg-gradient-to-br from-sky/20 to-berry/10 flex items-center justify-center text-8xl">
+          {cake.category === "cupcakes" ? "🧁" : "🎂"}
+        </div>
+
+        <div className="p-8">
+          <div className="flex justify-between items-start mb-4">
+            <h1 className="text-3xl font-bold text-chocolate">{cake.name}</h1>
+            <span className="bg-sky/10 text-sky px-3 py-1 rounded-full text-sm capitalize">
+              {cake.category}
+            </span>
+          </div>
+
+          <p className="text-chocolate/70 text-lg mb-8">{cake.description}</p>
+
+          <h2 className="text-xl font-bold text-chocolate mb-4">
+            Sizes & Pricing
+          </h2>
+          <div className="space-y-3 mb-8">
+            {cake.variations.map((v, i) => (
+              <div
+                key={i}
+                className="flex justify-between items-center p-4 bg-vanilla rounded-lg"
+              >
+                <span className="font-medium text-chocolate">{v.size}</span>
+                <span className="text-xl font-bold text-sky">
+                  ${(v.price_cents / 100).toFixed(2)}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-sky/5 rounded-lg p-6 mb-6">
+            <h3 className="font-bold text-chocolate mb-2">How to Order</h3>
+            <p className="text-chocolate/70 text-sm">
+              Click the chat icon in the bottom right corner to order this cake
+              through our AI assistant, or contact us via WhatsApp or Instagram
+              DM. Orders require at least 48 hours advance notice.
+            </p>
+          </div>
+
+          <div className="text-xs text-chocolate/50 p-4 bg-vanilla/50 rounded-lg">
+            <strong>Allergen notice:</strong> Our cakes are made in a kitchen
+            that handles nuts, dairy, eggs, wheat, and soy. We cannot guarantee
+            an allergen-free environment.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

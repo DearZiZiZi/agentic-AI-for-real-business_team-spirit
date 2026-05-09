@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Happy Cake US",
+  "name_for_model": "happycake",
+  "description_for_human": "Order custom cakes, cupcakes, and desserts from Happy Cake in Sugar Land, TX.",
+  "description_for_model": "API for browsing and ordering cakes from Happy Cake US bakery. Use /api/agents/catalog to see products, /api/agents/availability to check dates, and POST /api/agents/order-intent to place orders. Always check availability before ordering. Prices are in cents.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "/openapi.yaml"
+  },
+  "logo_url": "/brand/logo.png",
+  "contact_email": "hello@happycake.us",
+  "legal_info_url": "/policies"
+}

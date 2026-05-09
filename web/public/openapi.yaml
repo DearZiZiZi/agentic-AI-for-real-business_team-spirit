@@ -1,0 +1,166 @@
+openapi: 3.0.3
+info:
+  title: Happy Cake US API
+  description: API for browsing and ordering cakes from Happy Cake US bakery in Sugar Land, TX.
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8080
+    description: Development
+paths:
+  /api/agents/catalog:
+    get:
+      operationId: getCatalog
+      summary: List all available products with prices
+      responses:
+        "200":
+          description: Product catalog
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/agents/availability:
+    get:
+      operationId: getAvailability
+      summary: Check kitchen capacity for a specific date
+      parameters:
+        - name: date
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date
+          description: Date in YYYY-MM-DD format
+      responses:
+        "200":
+          description: Kitchen availability
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/agents/policies:
+    get:
+      operationId: getPolicies
+      summary: Read ordering policies and allergen information
+      responses:
+        "200":
+          description: Policies document
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  policies:
+                    type: string
+  /api/agents/products/{slug}:
+    get:
+      operationId: getProduct
+      summary: Get details for a specific product
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Product slug (e.g., honey-cake, classic-vanilla)
+      responses:
+        "200":
+          description: Product details
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/agents/order-intent:
+    post:
+      operationId: createOrderIntent
+      summary: Place an order for a product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - product
+                - customer_name
+              properties:
+                product:
+                  type: string
+                  description: Product name or slug
+                quantity:
+                  type: integer
+                  default: 1
+                pickup_date:
+                  type: string
+                  format: date
+                  description: Desired pickup date (YYYY-MM-DD)
+                pickup_time:
+                  type: string
+                  description: Desired pickup time (HH:MM)
+                customer_name:
+                  type: string
+                notes:
+                  type: string
+                  description: Special instructions
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: false
+          schema:
+            type: string
+          description: Unique key to prevent duplicate orders
+      responses:
+        "200":
+          description: Order result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  trace_id:
+                    type: string
+                  result:
+                    type: string
+  /api/chat:
+    post:
+      operationId: chat
+      summary: Chat with the Happy Cake AI assistant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                conversation_id:
+                  type: string
+                channel:
+                  type: string
+                  enum: [website, whatsapp, instagram]
+                  default: website
+      responses:
+        "200":
+          description: Assistant response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reply:
+                    type: string
+                  conversation_id:
+                    type: string
+                  trace_id:
+                    type: string
+                  tier:
+                    type: string
+                    enum: [A, B, C]
+                  escalation_required:
+                    type: boolean
+                  suggested_actions:
+                    type: array
+                    items:
+                      type: string
