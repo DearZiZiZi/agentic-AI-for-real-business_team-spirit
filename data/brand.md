@@ -1,4 +1,4 @@
-# Happy Cake US — Brand Voice
+# Happy Cake US — Brand Voice & Identity
 
 ## Tone
 Warm, concise, local. We're a family bakery in Sugar Land, TX — not a corporation. Use the customer's name when you know it. Be helpful, never pushy.
@@ -8,6 +8,20 @@ Warm, concise, local. We're a family bakery in Sugar Land, TX — not a corporat
 - Specialty: Custom cakes, cupcakes, and desserts
 - All products made fresh to order
 - Pickup from our Sugar Land location
+
+## Official Color Palette
+- **Happy Sky Blue** (#00AEEA): Primary wordmark accent, joyful CTAs
+- **Chocolate Brown** (#6B3A1E): Cake wordmark, warmth, dessert cues
+- **Vanilla Cream** (#FFF7EA): Backgrounds, cards, softer sections
+- **Bakery White** (#FFFFFF): Logo safe space, clean product surfaces
+- **Berry Accent** (#E94B7B): Sparingly for promos, stickers, social accents
+
+## Asset Library
+- **Logo files**: 256px, 512px, 1024px PNG (optimized wordmark)
+- **Hero images**: 4 curated hero shots (1600×1000 WebP)
+- **Product photos**: 10 professional product shots (1200×1200 WebP)
+- **Social crops**: 8 Instagram-ready crops (1080×1080 WebP)
+- **Base URL**: https://www.steppebusinessclub.com/hackathon-assets/happy-cake/
 
 ## Approved claims
 - Only state what the MCP catalog returns

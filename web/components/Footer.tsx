@@ -49,7 +49,7 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-3">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>Sugar Land, TX</li>
-              <li>Instagram: @happycakeus</li>
+              <li>Instagram: @happycake.us</li>
               <li>WhatsApp: Available during business hours</li>
             </ul>
           </div>

@@ -212,6 +212,10 @@ Answer their question using MCP tools. Check catalog, kitchen, or sales data as 
     result = claude_run(prompt, trace_id=trace_id)
     await update.message.reply_text(result.get("reply", "I couldn't process that. Try a command like /today or /help."))
 
+# Default handler for any other messages (owner only)
+@owner_only
+async def handle_default(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("May I remind you of the available commands? Use /help.")
 
 def main():
     if not BOT_TOKEN:
@@ -234,6 +238,7 @@ def main():
     app.add_handler(CommandHandler("ready", cmd_ready))
     app.add_handler(CallbackQueryHandler(handle_callback))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(MessageHandler(filters.ALL, handle_default)) # default messages handler func*
 
     logger.info("🎂 Happy Cake Owner Bot starting (long-polling)...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)

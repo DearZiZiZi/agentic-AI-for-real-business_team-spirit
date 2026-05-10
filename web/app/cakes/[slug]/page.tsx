@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import catalog from "@/data/catalog.json";
 
 interface ProductPageProps {
@@ -46,8 +47,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </Link>
 
       <div className="bg-white rounded-xl shadow-md overflow-hidden">
-        <div className="h-64 bg-gradient-to-br from-sky/20 to-berry/10 flex items-center justify-center text-8xl">
-          {cake.category === "cupcakes" ? "🧁" : "🎂"}
+        <div className="relative h-64 w-full bg-gradient-to-br from-sky/20 to-berry/10">
+          <Image
+            src={cake.image}
+            alt={cake.name}
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
 
         <div className="p-8">

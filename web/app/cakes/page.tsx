@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import catalog from "@/data/catalog.json";
 
 export default function CakesPage() {
@@ -19,8 +20,14 @@ export default function CakesPage() {
             href={`/cakes/${cake.slug}`}
             className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
           >
-            <div className="h-52 bg-gradient-to-br from-sky/20 to-berry/10 flex items-center justify-center text-7xl">
-              {cake.category === "cupcakes" ? "🧁" : "🎂"}
+            <div className="relative h-52 w-full bg-gradient-to-br from-sky/20 to-berry/10">
+              <Image
+                src={cake.image}
+                alt={cake.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
             <div className="p-5">
               <div className="flex justify-between items-start">
