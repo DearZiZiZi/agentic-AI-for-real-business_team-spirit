@@ -21,7 +21,9 @@ from api.prompts import (
 )
 from api.tiers import Tier, classify
 
-app = FastAPI(title="Happy Cake API", version="1.0.0")
+API_VERSION = "1.2.2"
+
+app = FastAPI(title="Happy Cake API", version=API_VERSION)
 
 app.add_middleware(
     CORSMiddleware,
@@ -39,7 +41,7 @@ PENDING_ORDERS: dict[str, dict] = {}
 
 @app.get("/health")
 async def health():
-    return {"ok": True, "service": "happycake-api", "version": "1.0.0"}
+    return {"ok": True, "service": "happycake-api", "version": API_VERSION}
 
 
 @app.post("/api/chat")

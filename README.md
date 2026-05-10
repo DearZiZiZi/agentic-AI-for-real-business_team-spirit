@@ -25,7 +25,9 @@ Brief explicitly allows a single super-agent. We use that to ship.
 - [Claude Code CLI](https://docs.claude.com/en/docs/claude-code) authenticated with a Claude Max subscription
 - [`cloudflared`](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/install-and-setup/installation/)
 - One Telegram bot token from [@BotFather](https://t.me/BotFather) for `@hc_owner_bot`
-- Your team's `X-Team-Token` from the Steppe Business Club dashboard
+- Registered Telegram bot "HappyCakeUS Owner Bot": http://t.me/happycake_us_owner_bot (we can transfer ownership if needed ~ after the hackathon)
+- How to get Telegram User ID? go here -> http://t.me/Getmyid_bot | send -> `/start` | then copy "Your ID".
+- Team's `X-Team-Token` from the Steppe Business Club dashboard.
 
 ### Run
 
@@ -56,7 +58,7 @@ After `make start` you should see:
 - `http://localhost:3000` — the Happy Cake site
 - `http://localhost:8080/health` — API health check
 - `https://<id>.trycloudflare.com` — public tunnel URL
-- `@hc_owner_bot` online in Telegram
+- `@happycake_us_owner_bot` online in Telegram
 
 ---
 
