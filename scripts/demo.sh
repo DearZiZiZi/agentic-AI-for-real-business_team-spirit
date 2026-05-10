@@ -3,8 +3,8 @@ set -euo pipefail
 
 API_URL="${API_URL:-http://localhost:8080}"
 
-echo "🎂 Happy Cake Demo — Full Customer Journey"
-echo "============================================"
+echo "🎂 HappyCake Demo — Full Customer Journey"
+echo "==========================================="
 echo ""
 
 echo "1. Health check..."

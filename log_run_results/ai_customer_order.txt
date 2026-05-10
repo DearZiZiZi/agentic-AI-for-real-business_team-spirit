@@ -1,0 +1,9 @@
+Order placed and kitchen ticket created:
+
+- **Order ID:** `sq_order_1778409477006`
+- **Kitchen ticket:** `kt_1778409480038` — queued
+- **Item:** Whole honey cake — $55.00
+- **Customer:** Test Buyer
+- **Pickup:** Saturday, May 16 at 3 PM
+
+Kitchen has plenty of capacity; the ticket is in the queue. — the HappyCake team

@@ -11,7 +11,10 @@ def build_chat_prompt(
     if history:
         history_block = f"\n\nConversation history:\n{json.dumps(history[-10:], indent=2)}"
 
-    return f"""You are the Happy Cake US concierge. A customer on {channel} sent a message.
+    return f"""You are the HappyCake US concierge agent. A customer on {channel} sent a message.
+
+Brand: HappyCake (one word, two capitals). Cakes use names like: cake "Honey", cake "Napoleon".
+Location: Sugar Land, TX. Voice: warm, plain English, specific, honest.
 
 Conversation ID: {conversation_id}
 Channel: {channel}
@@ -19,10 +22,12 @@ Customer message: {message}
 {history_block}
 
 Instructions:
-1. Use MCP tools to look up real catalog data, prices, and kitchen availability. NEVER make up prices or products.
-2. Reply in a warm, concise, local tone (Sugar Land, TX bakery).
-3. If the customer wants to order, create the order via square_create_order and kitchen_create_ticket.
-4. If this is a complaint, custom request, allergen concern, or they want a human — note escalation_required.
+1. Use MCP tools to look up real catalog data, prices, and kitchen availability. NEVER invent prices or products.
+2. Reply in HappyCake voice — friendly, plain English, specific quantities and prices.
+3. Close with a clear next step. "Order on the site at happycake.us or send a message on WhatsApp."
+4. Three emojis maximum. Often zero.
+5. If the customer wants to order, create the order via square_create_order and kitchen_create_ticket.
+6. If this is a complaint, custom request, allergen concern, or they want a human — note escalation_required.
 
 Respond with ONLY a JSON object (no markdown, no code fences):
 {{
@@ -44,7 +49,7 @@ def build_order_decision_prompt(
     customer_id: str,
     edit_notes: str = "",
 ) -> str:
-    return f"""Process this order decision from the bakery owner.
+    return f"""Process this order decision from the HappyCake owner.
 
 Order ID: {order_id}
 Decision: {decision}
@@ -58,6 +63,7 @@ Instructions:
 - If edit: note what needs to change.
 
 Send the customer notification via the appropriate channel tool (whatsapp_send_message for whatsapp, instagram_send_dm for instagram).
+Use HappyCake voice. Close with a clear next step.
 
 Respond with ONLY a JSON object:
 {{
@@ -70,17 +76,20 @@ Respond with ONLY a JSON object:
 
 
 def build_marketing_prompt() -> str:
-    return """Run a complete marketing cycle for Happy Cake US.
+    return """Run a complete marketing cycle for HappyCake US (Sugar Land, TX).
 
 Steps:
 1. Call square_get_pos_summary for recent sales data.
-2. Analyze top products, patterns, and opportunities.
-3. Allocate from the $500 monthly budget across: Meta Ads, Google Ads, Instagram boost, organic content.
+2. Analyse top products, day-of-week patterns, and margin data.
+3. Allocate the $500 monthly budget across: Meta Ads, Google Ads, Instagram boost, organic content.
    - Weight by ROAS from previous runs.
    - Reserve 20% for exploration.
-4. For each channel: call marketing_create_campaign with copy and budget, then marketing_launch_simulated_campaign.
+   - Justify every dollar with margin data and a measurable hypothesis.
+4. For each channel: call marketing_create_campaign with creative copy (HappyCake voice) and budget, then marketing_launch_simulated_campaign.
 5. Call marketing_generate_leads.
 6. Call marketing_report_to_owner with a summary.
+
+Use HappyCake brand voice in all creative copy. Close every ad with: "Order on the site at happycake.us or send a message on WhatsApp."
 
 Respond with ONLY a JSON object:
 {
@@ -94,19 +103,32 @@ Respond with ONLY a JSON object:
 
 
 def build_briefing_prompt() -> str:
-    return """Generate a daily briefing for the Happy Cake US owner.
+    return """Generate a daily briefing for the HappyCake US owner.
 
 Steps:
 1. Call square_get_pos_summary for recent sales.
 2. Call kitchen_get_production_summary for today's capacity.
-3. Summarize: revenue, top sellers, kitchen status, pending items, anomalies.
+3. Summarise: revenue, top sellers, kitchen status, pending items, anomalies.
 
-Respond with a formatted text message (NOT JSON) suitable for Telegram, using emoji sparingly:
+Respond with a formatted text message (NOT JSON) suitable for Telegram. Use plain English, specifics over adjectives. Three emojis maximum.
 
-📊 Daily Briefing — [Date]
+Daily Briefing — [Date]
 
-💰 Revenue: ...
-🏭 Kitchen: ...
-⚠️ Attention: ...
-📢 Marketing: ...
+Revenue: $X,XXX (XX orders)
+Top sellers: cake "Honey", cake "Napoleon"
+
+Kitchen today:
+- Capacity: XX/XX slots
+- Pending: XX
+- Ready for pickup: XX
+
+Needs attention:
+- [any issues]
+
+Marketing:
+- Last run: [date]
+- Leads: XX
+- ROAS: X.Xx
+
+— the HappyCake team
 """

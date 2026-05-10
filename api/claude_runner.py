@@ -1,6 +1,7 @@
 import json
 import os
 import subprocess
+import tempfile
 import time
 from pathlib import Path
 
@@ -9,6 +10,25 @@ from api.audit import write_event
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CLAUDE_BIN = os.environ.get("CLAUDE_BIN", "claude")
 CLAUDE_TIMEOUT = int(os.environ.get("CLAUDE_TIMEOUT_S", "60"))
+TEAM_TOKEN = os.environ.get("TEAM_TOKEN", "")
+
+
+def _get_mcp_config_path() -> str:
+    """Create a runtime MCP config with the actual token substituted."""
+    config = {
+        "mcpServers": {
+            "happycake": {
+                "type": "http",
+                "url": "https://www.steppebusinessclub.com/api/mcp",
+                "headers": {
+                    "X-Team-Token": TEAM_TOKEN,
+                },
+            }
+        }
+    }
+    config_path = PROJECT_ROOT / ".claude" / "mcp_runtime.json"
+    config_path.write_text(json.dumps(config, indent=2))
+    return str(config_path)
 
 
 def run(prompt: str, *, trace_id: str, timeout_s: int | None = None) -> dict:
@@ -16,13 +36,15 @@ def run(prompt: str, *, trace_id: str, timeout_s: int | None = None) -> dict:
 
     write_event(trace_id, "claude_runner", "invoke", {"prompt_length": len(prompt)})
 
+    mcp_config = _get_mcp_config_path()
+
     try:
         result = subprocess.run(
             [
                 CLAUDE_BIN, "-p", prompt,
                 "--output-format", "json",
-                "--mcp-config", str(PROJECT_ROOT / ".claude" / "mcp.json"),
-                "--cwd", str(PROJECT_ROOT),
+                "--mcp-config", mcp_config,
+                "--dangerously-skip-permissions",
             ],
             capture_output=True,
             text=True,
@@ -38,7 +60,7 @@ def run(prompt: str, *, trace_id: str, timeout_s: int | None = None) -> dict:
             return {
                 "ok": False,
                 "error": result.stderr[:500] or "Claude CLI returned non-zero",
-                "reply": "I'm having trouble right now. Let me get the owner to help you.",
+                "reply": "Apologies — we're having a moment. Let me get the owner to help you.",
             }
 
         try:
@@ -66,7 +88,7 @@ def run(prompt: str, *, trace_id: str, timeout_s: int | None = None) -> dict:
         return {
             "ok": False,
             "error": "timeout",
-            "reply": "I need a moment — the bakery is busy! I'll get back to you shortly.",
+            "reply": "We need a moment — the kitchen is busy. We'll get back to you shortly.",
         }
     except Exception as e:
         write_event(trace_id, "claude_runner", "exception", {"error": str(e)})

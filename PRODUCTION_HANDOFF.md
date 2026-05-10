@@ -1,6 +1,6 @@
-# Happy Cake US — Production Handoff
+# HappyCake US — Production Handoff
 
-Eight changes to ship this demo to a real Happy Cake customer. Each is named with the file and line to change.
+Eight changes to ship this demo to a real HappyCake customer. Each is named with the file and line to change.
 
 ---
 

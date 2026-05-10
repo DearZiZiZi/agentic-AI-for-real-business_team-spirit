@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-  title: Happy Cake US API
-  description: API for browsing and ordering cakes from Happy Cake US bakery in Sugar Land, TX.
+  title: HappyCake US API
+  description: API for browsing and ordering cakes from HappyCake US bakery in Sugar Land, TX.
   version: "1.0.0"
 servers:
   - url: http://localhost:8080
@@ -123,7 +123,7 @@ paths:
   /api/chat:
     post:
       operationId: chat
-      summary: Chat with the Happy Cake AI assistant
+      summary: Chat with the HappyCake AI assistant
       requestBody:
         required: true
         content:

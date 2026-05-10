@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-sky: #00AEEA;
-  --color-chocolate: #6B3A1E;
-  --color-vanilla: #FFF7EA;
-  --color-berry: #E94B7B;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-hb-900: #0E2A3C;
+  --color-hb-700: #1B4868;
+  --color-hb-500: #3B7BA8;
+  --color-hb-200: #BFD8E8;
+  --color-cream-50: #FBF6E8;
+  --color-cream-100: #F4ECD3;
+  --color-cream-200: #E9DBB4;
+  --color-coral: #E08066;
+  --color-green: #6E9D74;
+  --color-text: #1A1816;
+  --color-text-on-blue: #FBF6E8;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
 }
 
 html {
@@ -14,7 +21,18 @@ html {
 }
 
 body {
-  background: #FFF7EA !important;
-  color: #6B3A1E !important;
-  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  background: #FBF6E8 !important;
+  color: #1A1816 !important;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 16px;
 }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: #0E2A3C;
+}
+
+h1 { font-size: 48px; line-height: 1.05; }
+h2 { font-size: 32px; line-height: 1.15; }
+h3 { font-size: 22px; line-height: 1.25; }

@@ -1,24 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Assistant } from "@/components/Assistant";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Happy Cake US | Custom Cakes in Sugar Land, TX",
+  title: "HappyCake US | Fresh Cakes in Sugar Land, TX",
   description:
-    "Fresh custom cakes, cupcakes, and desserts made to order in Sugar Land, TX. Order online or chat with our AI assistant.",
+    "Real cakes, made by hand in our Sugar Land kitchen. Cake \"Honey\", cake \"Napoleon\", cake \"Pistachio Roll\" and more. Order on the site or send a message.",
 };
 
 export default function RootLayout({
@@ -27,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -35,9 +38,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Happy Cake US",
+              name: "HappyCake US",
               description:
-                "Custom cakes, cupcakes, and desserts in Sugar Land, TX",
+                "Real cakes, made by hand in Sugar Land, TX. The original taste of happiness.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Sugar Land",
@@ -45,14 +48,14 @@ export default function RootLayout({
                 addressCountry: "US",
               },
               url: "https://happycake.us",
-              telephone: "+1-000-000-0000",
               priceRange: "$$",
-              servesCuisine: "Bakery",
+              servesCuisine: "Bakery, Cakes, Desserts",
+              slogan: "The original taste of happiness.",
             }),
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-vanilla text-chocolate">
+      <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

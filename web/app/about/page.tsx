@@ -1,58 +1,62 @@
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-chocolate text-center mb-4">
-        About Happy Cake
+      <h1 className="font-display text-4xl font-bold text-hb-900 text-center mb-4">
+        About HappyCake
       </h1>
-      <p className="text-center text-chocolate/60 mb-10 max-w-xl mx-auto">
-        A family bakery in Sugar Land, TX, making every celebration sweeter.
+      <p className="text-center text-text/60 mb-10 max-w-xl mx-auto font-body">
+        A neighbourhood bakery in Sugar Land, TX.
       </p>
 
-      <div className="bg-white rounded-xl shadow-md p-8 mb-8">
-        <h2 className="text-2xl font-bold text-chocolate mb-4">Our Story</h2>
-        <p className="text-chocolate/70 mb-4">
-          Happy Cake started with a simple belief: every celebration deserves a
-          cake made with love. Based in Sugar Land, TX, we serve the Greater
-          Houston area with custom cakes, cupcakes, and desserts made fresh to
-          order.
+      <div className="bg-cream-100 rounded-xl p-8 mb-8 border border-hb-900/10">
+        <h2 className="font-display text-2xl font-bold text-hb-900 mb-4">
+          It started with a phrase
+        </h2>
+        <p className="text-text/70 font-body mb-4">
+          &quot;It&apos;s just like homemade.&quot;
         </p>
-        <p className="text-chocolate/70 mb-4">
-          Every cake is made from scratch — never from a mix. We use quality
-          ingredients and take pride in our craft, whether it&apos;s a simple
-          birthday cake or an elaborate wedding centerpiece.
+        <p className="text-text/70 font-body mb-4">
+          We started baking cakes. As if for ourselves. Delicious, sweet, fresh
+          cakes. People kept coming back saying it tasted like they baked it
+          themselves. And we realised that homemade taste was the centre of what
+          we wanted to make.
         </p>
-        <p className="text-chocolate/70">
-          We&apos;re a small team, and that means personal attention for every
-          order. When you order from Happy Cake, you&apos;re not just getting a
-          cake — you&apos;re getting our commitment to making your day special.
+        <p className="text-text/70 font-body mb-4">
+          Every ingredient is carefully selected. Every cake is hand-decorated
+          and hand-packed. Every recipe was perfected over years until it earned
+          its name.
+        </p>
+        <p className="text-text/70 font-body">
+          We love watching people be happy. We love making delicious things. The
+          combination is HappyCake.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-sky/5 rounded-xl p-6 text-center">
-          <div className="text-4xl mb-3">📍</div>
-          <h3 className="font-bold text-chocolate mb-1">Location</h3>
-          <p className="text-chocolate/60 text-sm">Sugar Land, TX</p>
-          <p className="text-chocolate/60 text-sm">Greater Houston Area</p>
+        <div className="bg-hb-200/20 rounded-xl p-6 text-center border border-hb-200/40">
+          <h3 className="font-body font-bold text-hb-900 mb-1">Location</h3>
+          <p className="text-text/60 text-sm font-body">Sugar Land, TX</p>
+          <p className="text-text/60 text-sm font-body">
+            Greater Houston Area
+          </p>
         </div>
-        <div className="bg-sky/5 rounded-xl p-6 text-center">
-          <div className="text-4xl mb-3">🎂</div>
-          <h3 className="font-bold text-chocolate mb-1">What We Make</h3>
-          <p className="text-chocolate/60 text-sm">Custom cakes, cupcakes,</p>
-          <p className="text-chocolate/60 text-sm">and specialty desserts</p>
+        <div className="bg-hb-200/20 rounded-xl p-6 text-center border border-hb-200/40">
+          <h3 className="font-body font-bold text-hb-900 mb-1">What we make</h3>
+          <p className="text-text/60 text-sm font-body">
+            Traditional cakes, desserts, and coffee
+          </p>
+          <p className="text-text/60 text-sm font-body">
+            The kind handed down through families
+          </p>
         </div>
       </div>
 
-      <div className="bg-vanilla rounded-xl p-8 text-center">
-        <h3 className="text-xl font-bold text-chocolate mb-2">
-          Get in Touch
+      <div className="bg-cream-50 rounded-xl p-8 text-center border border-hb-900/5">
+        <h3 className="font-display text-xl font-bold text-hb-900 mb-2">
+          Get in touch
         </h3>
-        <p className="text-chocolate/60 mb-4">
-          Have questions? Chat with our AI assistant, message us on Instagram
-          @happycakeus, or reach out on WhatsApp.
-        </p>
-        <p className="text-sm text-chocolate/40">
-          We typically respond within a few minutes during business hours.
+        <p className="text-text/60 font-body">
+          Order on the site at happycake.us or send a message on WhatsApp.
         </p>
       </div>
     </div>

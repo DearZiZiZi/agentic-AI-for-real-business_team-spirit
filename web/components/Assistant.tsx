@@ -13,7 +13,7 @@ export function Assistant() {
     {
       role: "assistant",
       content:
-        "Hi! I'm the Happy Cake assistant. How can I help you today? 🎂",
+        "Welcome to HappyCake. How can we help you today? Browse our cakes, ask about availability, or place an order.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -53,7 +53,7 @@ export function Assistant() {
       const data = await res.json();
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: data.reply || "I'm here to help!" },
+        { role: "assistant", content: data.reply || "Let me check on that for you." },
       ]);
     } catch {
       setMessages((prev) => [
@@ -61,7 +61,7 @@ export function Assistant() {
         {
           role: "assistant",
           content:
-            "Sorry, I'm having trouble connecting. Please try again in a moment!",
+            "Apologies — we're having a moment. Please try again, or send us a message on WhatsApp.",
         },
       ]);
     } finally {
@@ -71,41 +71,38 @@ export function Assistant() {
 
   return (
     <>
-      {/* Toggle button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-sky text-white rounded-full shadow-lg hover:bg-sky/90 transition-all z-50 flex items-center justify-center text-2xl"
-        aria-label={open ? "Close assistant" : "Open assistant"}
+        className="fixed bottom-6 right-6 w-14 h-14 bg-hb-700 text-cream-50 rounded-full shadow-lg hover:bg-hb-500 transition-all z-50 flex items-center justify-center text-xl font-body"
+        aria-label={open ? "Close assistant" : "Chat with HappyCake"}
       >
-        {open ? "✕" : "💬"}
+        {open ? "✕" : "◆"}
       </button>
 
-      {/* Chat drawer */}
       {open && (
-        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] h-[500px] bg-white rounded-xl shadow-2xl border border-sky/20 flex flex-col z-50 overflow-hidden">
-          {/* Header */}
-          <div className="bg-sky text-white px-4 py-3 flex items-center gap-2">
-            <span className="text-xl">🎂</span>
+        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] h-[500px] bg-white rounded-xl shadow-2xl border border-hb-200 flex flex-col z-50 overflow-hidden">
+          <div className="bg-hb-900 text-cream-50 px-4 py-3 flex items-center gap-3">
             <div>
-              <div className="font-semibold text-sm">Happy Cake Assistant</div>
-              <div className="text-xs text-white/80">
-                Ask about cakes, prices, or place an order
+              <div className="font-display font-semibold text-sm">
+                HappyCake Assistant
+              </div>
+              <div className="text-xs text-cream-200 font-body">
+                Cakes, prices, availability, orders
               </div>
             </div>
           </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-cream-50">
             {messages.map((msg, i) => (
               <div
                 key={i}
                 className={`flex ${msg.role === "customer" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[80%] px-3 py-2 rounded-lg text-sm ${
+                  className={`max-w-[80%] px-3 py-2 rounded-lg text-sm font-body ${
                     msg.role === "customer"
-                      ? "bg-sky text-white rounded-br-sm"
-                      : "bg-vanilla text-chocolate rounded-bl-sm"
+                      ? "bg-hb-700 text-cream-50 rounded-br-sm"
+                      : "bg-cream-100 text-text rounded-bl-sm"
                   }`}
                 >
                   {msg.content}
@@ -114,29 +111,28 @@ export function Assistant() {
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-vanilla text-chocolate px-3 py-2 rounded-lg text-sm">
-                  <span className="animate-pulse">Thinking...</span>
+                <div className="bg-cream-100 text-text px-3 py-2 rounded-lg text-sm font-body">
+                  <span className="animate-pulse">Checking...</span>
                 </div>
               </div>
             )}
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
-          <div className="border-t border-sky/10 p-3 flex gap-2">
+          <div className="border-t border-hb-200/30 p-3 flex gap-2 bg-white">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Ask about our cakes..."
-              className="flex-1 px-3 py-2 border border-sky/20 rounded-lg text-sm focus:outline-none focus:border-sky bg-vanilla"
+              className="flex-1 px-3 py-2 border border-hb-200 rounded text-sm font-body focus:outline-none focus:border-hb-500 bg-cream-50"
               disabled={loading}
             />
             <button
               onClick={sendMessage}
               disabled={loading || !input.trim()}
-              className="bg-sky text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-sky/90 disabled:opacity-50 transition-colors"
+              className="bg-hb-700 text-cream-50 px-4 py-2 rounded text-sm font-body font-medium hover:bg-hb-500 disabled:opacity-50 transition-colors"
             >
               Send
             </button>

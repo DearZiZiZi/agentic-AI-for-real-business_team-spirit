@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "🎂 Starting Happy Cake services..."
+echo "🎂 Starting HappyCake services..."
 echo ""
 
 trap 'echo "Stopping..."; kill $(jobs -p) 2>/dev/null; exit 0' SIGINT SIGTERM

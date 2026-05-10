@@ -1,0 +1,8 @@
+{
+    "reply": "```json\n{\n  \"reply\": \"I'm really sorry to hear yesterday's cake wasn't what you expected. That's not the experience we want for you, and I take this seriously.\\n\\nI'm flagging this right now for our owner to follow up with you directly. Please expect a personal response shortly \u2014 they'll want to hear exactly what happened and make it right.\\n\\nIf you'd like to share more details in the meantime (what you ordered, what the issue was), that will help us respond faster. \u2014 the HappyCake team\",\n  \"intent\": \"complaint\",\n  \"escalation_required\": true,\n  \"order_id\": null,\n  \"order_total_cents\": 0,\n  \"is_standard_sku\": true,\n  \"suggested_actions\": [\"escalate_to_owner\", \"await_owner_response\"],\n  \"tools_called\": []\n}\n```",
+    "conversation_id": "test-escalation",
+    "trace_id": "trace_f8e163cf06f0",
+    "tier": "C",
+    "escalation_required": true,
+    "suggested_actions": []
+}

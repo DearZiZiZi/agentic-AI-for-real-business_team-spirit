@@ -1,11 +1,21 @@
-# Happy Cake US — Agent Ordering Guide
+# HappyCake US — Agent Ordering Guide
 
-Happy Cake is a bakery in Sugar Land, TX. This document helps AI agents order on behalf of customers.
+HappyCake is a bakery in Sugar Land, TX. Traditional cakes, made by hand. This document helps AI agents order on behalf of customers.
+
+## Products
+
+Products come from the MCP catalog. Key items:
+- Cake "Honey" — slice ($8.50) or whole 1.2 kg ($55)
+- Cake "Pistachio Roll" — slice ($9.50)
+- Custom birthday cake — from $95 (requires owner consultation)
+- Office dessert box — $120 (serves 8-10)
+
+Always check live catalog via GET /api/agents/catalog for current prices and availability.
 
 ## How to Order
 
-1. GET /api/agents/catalog — browse available products with prices
-2. GET /api/agents/availability?date=YYYY-MM-DD — check kitchen capacity for a date
+1. GET /api/agents/catalog — browse available products with live prices
+2. GET /api/agents/availability?date=YYYY-MM-DD — check kitchen capacity
 3. GET /api/agents/policies — read ordering policies and allergen info
 4. GET /api/agents/products/{slug} — get details for a specific product
 5. POST /api/agents/order-intent — place an order
@@ -17,35 +27,33 @@ Content-Type: application/json
 Idempotency-Key: <unique-key>
 
 {
-  "product": "honey cake",
+  "product": "whole honey cake",
   "quantity": 1,
   "pickup_date": "2026-05-16",
   "pickup_time": "15:00",
   "customer_name": "Jane Doe",
-  "notes": "8-inch please, with Happy Birthday written on top"
+  "notes": "For a birthday party, 10 guests"
 }
 
-## Important Notes
+## Constraints
 
-- Orders require at least 48 hours advance notice
-- Custom cakes (wedding, shaped, non-standard) require a consultation with the owner
-- All prices are in USD cents in the API, displayed as dollars on the website
+- Standard items: 24 hours advance notice
+- Custom cakes: 5-7 business days, requires owner consultation
 - Kitchen capacity is limited — always check availability before ordering
-- Allergen notice: kitchen handles nuts, dairy, eggs, wheat, soy, and gluten
+- Allergens: kitchen handles nuts, dairy, eggs, wheat, soy, gluten
+- All prices in USD cents in the API
 
 ## Product Slugs
 
-- classic-vanilla
-- chocolate-dream
-- red-velvet
-- honey-cake
-- assorted-cupcakes
-- strawberry-shortcake
+- honey-cake-slice
+- whole-honey-cake
+- pistachio-roll
+- custom-birthday-cake
+- office-dessert-box
 
 ## Base URL
 
 Development: http://localhost:8080
-Production: https://happycake.us
 
 ## OpenAPI Spec
 

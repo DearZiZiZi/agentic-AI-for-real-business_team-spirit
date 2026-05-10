@@ -1,4 +1,4 @@
-# Happy Cake US — Policies
+# HappyCake US — Policies
 
 ## Ordering
 - Orders placed at least 48 hours in advance for standard items

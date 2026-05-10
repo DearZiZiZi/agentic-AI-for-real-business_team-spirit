@@ -1,4 +1,4 @@
-# Happy Cake US — Business Impact Analysis
+# HappyCake US — Business Impact Analysis
 
 ## Executive Summary
 
