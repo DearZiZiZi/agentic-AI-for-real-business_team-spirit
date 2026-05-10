@@ -116,13 +116,17 @@ Runs a full customer journey: health check, catalog browse, availability check, 
 
 ```bash
 # Recent events
-curl "http://localhost:8080/internal/audit?token=$INTERNAL_AUDIT_TOKEN" | python3 -m json.tool
+curl -H "Authorization: Bearer $INTERNAL_AUDIT_TOKEN" \
+  http://localhost:8080/internal/audit | python3 -m json.tool
 
 # Specific trace
-curl "http://localhost:8080/internal/audit?trace_id=<TRACE_ID>&token=$INTERNAL_AUDIT_TOKEN" | python3 -m json.tool
+curl -H "Authorization: Bearer $INTERNAL_AUDIT_TOKEN" \
+  "http://localhost:8080/internal/audit?trace_id=<TRACE_ID>" | python3 -m json.tool
 ```
 
 Every request generates a `trace_id` that ties together: API request, Claude invocation, MCP tool calls, tier classification, and response.
+
+Authentication uses `Authorization: Bearer <INTERNAL_AUDIT_TOKEN>` header format.
 
 ### 7. Telegram bot (@hc_owner_bot)
 

@@ -253,4 +253,4 @@ The site forces light mode. If you see issues, clear browser cache and reload.
 | Website | http://localhost:3000 | 3000 |
 | Health check | http://localhost:8080/health | 8080 |
 | Catalog API | http://localhost:8080/api/agents/catalog | 8080 |
-| Audit | http://localhost:8080/internal/audit?token=YOUR_TOKEN | 8080 |
+| Audit | http://localhost:8080/internal/audit (Bearer token) | 8080 |
