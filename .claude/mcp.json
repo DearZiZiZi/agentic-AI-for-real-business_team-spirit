@@ -1,6 +1,7 @@
 {
   "mcpServers": {
     "happycake": {
+      "type": "http",
       "url": "https://www.steppebusinessclub.com/api/mcp",
       "headers": {
         "X-Team-Token": "${TEAM_TOKEN}"

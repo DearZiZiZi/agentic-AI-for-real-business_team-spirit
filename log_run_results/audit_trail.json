@@ -1,0 +1,225 @@
+{
+    "events": [
+        {
+            "trace_id": "trace_b6dc39757a5d",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "test-1",
+                "channel": "website",
+                "message_length": 66
+            },
+            "created_at": 1778409223.187535,
+            "iso": "2026-05-10T10:33:43Z"
+        },
+        {
+            "trace_id": "trace_b6dc39757a5d",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 1420
+            },
+            "created_at": 1778409223.187843,
+            "iso": "2026-05-10T10:33:43Z"
+        },
+        {
+            "trace_id": "trace_b6dc39757a5d",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 2017,
+                "has_result": true
+            },
+            "created_at": 1778409249.171394,
+            "iso": "2026-05-10T10:34:09Z"
+        },
+        {
+            "trace_id": "trace_b6dc39757a5d",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "A",
+                "reason": "Informational reply, no order action",
+                "intent": "general"
+            },
+            "created_at": 1778409249.17263,
+            "iso": "2026-05-10T10:34:09Z"
+        },
+        {
+            "trace_id": "trace_b6dc39757a5d",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 1059,
+                "tier": "A",
+                "escalation": false
+            },
+            "created_at": 1778409249.172914,
+            "iso": "2026-05-10T10:34:09Z"
+        },
+        {
+            "trace_id": "trace_c7b21b4a90f0",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "demo-1",
+                "channel": "website",
+                "message_length": 70
+            },
+            "created_at": 1778409293.1369002,
+            "iso": "2026-05-10T10:34:53Z"
+        },
+        {
+            "trace_id": "trace_c7b21b4a90f0",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 1428
+            },
+            "created_at": 1778409293.137161,
+            "iso": "2026-05-10T10:34:53Z"
+        },
+        {
+            "trace_id": "trace_c7b21b4a90f0",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 2109,
+                "has_result": true
+            },
+            "created_at": 1778409313.605382,
+            "iso": "2026-05-10T10:35:13Z"
+        },
+        {
+            "trace_id": "trace_c7b21b4a90f0",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "A",
+                "reason": "Informational reply, no order action",
+                "intent": "general"
+            },
+            "created_at": 1778409313.606776,
+            "iso": "2026-05-10T10:35:13Z"
+        },
+        {
+            "trace_id": "trace_c7b21b4a90f0",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 1136,
+                "tier": "A",
+                "escalation": false
+            },
+            "created_at": 1778409313.6068962,
+            "iso": "2026-05-10T10:35:13Z"
+        },
+        {
+            "trace_id": "trace_d87580bb4f9e",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "demo-1",
+                "channel": "website",
+                "message_length": 86
+            },
+            "created_at": 1778409313.663978,
+            "iso": "2026-05-10T10:35:13Z"
+        },
+        {
+            "trace_id": "trace_d87580bb4f9e",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 2847
+            },
+            "created_at": 1778409313.664129,
+            "iso": "2026-05-10T10:35:13Z"
+        },
+        {
+            "trace_id": "trace_d87580bb4f9e",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 2151,
+                "has_result": true
+            },
+            "created_at": 1778409336.909903,
+            "iso": "2026-05-10T10:35:36Z"
+        },
+        {
+            "trace_id": "trace_d87580bb4f9e",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "A",
+                "reason": "Informational reply, no order action",
+                "intent": "general"
+            },
+            "created_at": 1778409336.910296,
+            "iso": "2026-05-10T10:35:36Z"
+        },
+        {
+            "trace_id": "trace_d87580bb4f9e",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 1201,
+                "tier": "A",
+                "escalation": false
+            },
+            "created_at": 1778409336.910665,
+            "iso": "2026-05-10T10:35:36Z"
+        },
+        {
+            "trace_id": "trace_178693cdc6b7",
+            "agent": "api",
+            "event": "order_intent",
+            "payload": {
+                "idempotency_key": "demo-order-001",
+                "body": {
+                    "product": "honey cake",
+                    "quantity": 1,
+                    "pickup_date": "2026-05-16",
+                    "pickup_time": "15:00",
+                    "customer_name": "Test Buyer",
+                    "notes": "8-inch please"
+                }
+            },
+            "created_at": 1778409336.9247308,
+            "iso": "2026-05-10T10:35:36Z"
+        },
+        {
+            "trace_id": "trace_178693cdc6b7",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 656
+            },
+            "created_at": 1778409336.9249,
+            "iso": "2026-05-10T10:35:36Z"
+        },
+        {
+            "trace_id": "trace_178693cdc6b7",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 1223,
+                "has_result": true
+            },
+            "created_at": 1778409355.7825239,
+            "iso": "2026-05-10T10:35:55Z"
+        },
+        {
+            "trace_id": "trace_178693cdc6b7",
+            "agent": "api",
+            "event": "order_intent_result",
+            "payload": {
+                "ok": true
+            },
+            "created_at": 1778409355.782908,
+            "iso": "2026-05-10T10:35:55Z"
+        }
+    ],
+    "count": 19
+}

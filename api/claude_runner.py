@@ -18,6 +18,7 @@ def _get_mcp_config_path() -> str:
     config = {
         "mcpServers": {
             "happycake": {
+                "type": "http",
                 "url": "https://www.steppebusinessclub.com/api/mcp",
                 "headers": {
                     "X-Team-Token": TEAM_TOKEN,
@@ -43,7 +44,7 @@ def run(prompt: str, *, trace_id: str, timeout_s: int | None = None) -> dict:
                 CLAUDE_BIN, "-p", prompt,
                 "--output-format", "json",
                 "--mcp-config", mcp_config,
-                "--cwd", str(PROJECT_ROOT),
+                "--dangerously-skip-permissions",
             ],
             capture_output=True,
             text=True,
