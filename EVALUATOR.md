@@ -225,6 +225,7 @@ Owner (Telegram @hc_owner_bot)
 ├── tests/                   # Unit tests
 ├── scripts/demo.sh          # End-to-end demo script
 ├── log_run_results/         # Test run logs and evidence
+├── screenshots/             # Screenshots of working service evidence
 ├── ARCHITECTURE.md          # System design
 ├── BUSINESS_IMPACT.md       # $500 → $5,000 revenue analysis
 ├── PRODUCTION_HANDOFF.md    # 8 named swaps for production
