@@ -73,38 +73,38 @@ export function Assistant() {
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-coral text-cream-50 rounded-full shadow-lg hover:bg-coral-light hover:text-hb-900 transition-all z-50 flex items-center justify-center text-xl font-body hover:scale-105"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-coral text-cream-50 rounded-full shadow-lg hover:bg-coral-light hover:text-hb-900 transition-all z-50 flex items-center justify-center text-lg sm:text-xl font-body hover:scale-105"
         aria-label={open ? "Close assistant" : "Chat with HappyCake"}
       >
         {open ? "✕" : "💬"}
       </button>
 
       {open && (
-        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] h-[520px] bg-white rounded-2xl shadow-2xl border border-hb-200/40 flex flex-col z-50 overflow-hidden">
-          <div className="bg-gradient-to-r from-hb-900 to-hb-700 text-cream-50 px-5 py-4 flex items-center gap-3">
-            <div className="w-9 h-9 bg-coral/20 rounded-full flex items-center justify-center text-sm">
-              🎂
+        <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 w-[calc(100vw-2rem)] sm:w-96 max-w-md h-[70vh] sm:h-[520px] bg-white rounded-2xl shadow-2xl border border-hb-200/40 flex flex-col z-50 overflow-hidden">
+          <div className="bg-gradient-to-r from-hb-500 to-hb-400 text-cream-50 px-4 sm:px-5 py-3.5 sm:py-4 flex items-center gap-3">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 bg-white/15 rounded-full flex items-center justify-center text-sm">
+              &#x1F382;
             </div>
             <div>
-              <div className="font-display font-semibold text-base">
+              <div className="font-display font-semibold text-sm sm:text-base">
                 HappyCake Assistant
               </div>
-              <div className="text-xs text-hb-200 font-body">
+              <div className="text-xs text-cream-50/70 font-body">
                 Cakes, prices, availability, orders
               </div>
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-cream-50">
+          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 bg-cream-50">
             {messages.map((msg, i) => (
               <div
                 key={i}
                 className={`flex ${msg.role === "customer" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm font-body leading-relaxed ${
+                  className={`max-w-[85%] sm:max-w-[80%] px-3.5 sm:px-4 py-2.5 rounded-2xl text-sm font-body leading-relaxed ${
                     msg.role === "customer"
-                      ? "bg-hb-700 text-cream-50 rounded-br-md"
+                      ? "bg-hb-400 text-cream-50 rounded-br-md"
                       : "bg-white text-text rounded-bl-md shadow-sm border border-hb-200/20"
                   }`}
                 >
@@ -122,20 +122,20 @@ export function Assistant() {
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="border-t border-hb-200/20 p-3 flex gap-2 bg-white">
+          <div className="border-t border-hb-200/20 p-2.5 sm:p-3 flex gap-2 bg-white">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Ask about our cakes..."
-              className="flex-1 px-4 py-2.5 border border-hb-200/40 rounded-xl text-sm font-body focus:outline-none focus:border-hb-500 focus:ring-2 focus:ring-hb-500/10 bg-cream-50 transition-all"
+              className="flex-1 px-3.5 sm:px-4 py-2.5 border border-hb-200/40 rounded-xl text-sm font-body focus:outline-none focus:border-hb-400 focus:ring-2 focus:ring-hb-400/10 bg-cream-50 transition-all"
               disabled={loading}
             />
             <button
               onClick={sendMessage}
               disabled={loading || !input.trim()}
-              className="bg-coral text-cream-50 px-5 py-2.5 rounded-xl text-sm font-body font-semibold hover:bg-coral-light hover:text-hb-900 disabled:opacity-40 transition-all"
+              className="bg-coral text-cream-50 px-4 sm:px-5 py-2.5 rounded-xl text-sm font-body font-semibold hover:bg-coral-light hover:text-hb-900 disabled:opacity-40 transition-all"
             >
               Send
             </button>

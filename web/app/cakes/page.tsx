@@ -4,39 +4,39 @@ import catalog from "@/data/catalog.json";
 
 export default function CakesPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-14">
+    <div className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
       <p className="text-center text-coral font-body text-sm font-semibold tracking-widest uppercase mb-2">
         Fresh daily
       </p>
-      <h1 className="font-display text-5xl font-bold text-hb-900 text-center mb-4">
+      <h1 className="font-display text-4xl sm:text-5xl font-bold text-hb-700 text-center mb-4">
         Our Cakes
       </h1>
-      <p className="text-center text-text/50 mb-12 max-w-xl mx-auto font-body text-lg">
+      <p className="text-center text-text/50 mb-8 sm:mb-12 max-w-xl mx-auto font-body text-base sm:text-lg px-2">
         All cakes are made fresh. Prices shown are current — for custom sizes
         and decoration, send us a message.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {catalog.map((cake) => (
           <Link
             key={cake.id}
             href={`/cakes/${cake.slug}`}
             className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-hb-200/40 hover:-translate-y-1"
           >
-            <div className="relative h-52 w-full bg-gradient-to-br from-hb-100 to-cream-100">
+            <div className="relative h-48 sm:h-52 w-full bg-gradient-to-br from-hb-50 to-hb-100">
               <Image
                 src={cake.image}
                 alt={cake.name}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <span className="absolute top-3 right-3 text-[10px] bg-hb-900/80 text-cream-50 px-2.5 py-1 rounded-full font-body uppercase tracking-wider backdrop-blur-sm z-10">
+              <span className="absolute top-3 right-3 text-[10px] bg-hb-500/90 text-cream-50 px-2.5 py-1 rounded-full font-body uppercase tracking-wider backdrop-blur-sm z-10">
                 {cake.category}
               </span>
             </div>
-            <div className="p-6">
-              <h2 className="font-display font-bold text-xl text-hb-900 group-hover:text-hb-500 transition-colors">
+            <div className="p-5 sm:p-6">
+              <h2 className="font-display font-bold text-lg sm:text-xl text-hb-700 group-hover:text-hb-500 transition-colors">
                 {cake.name}
               </h2>
               <p className="text-sm text-text/50 mt-2 font-body leading-relaxed">
@@ -65,11 +65,11 @@ export default function CakesPage() {
         ))}
       </div>
 
-      <div className="text-center mt-16 p-10 bg-gradient-to-br from-hb-100/50 to-cream-100 rounded-2xl border border-hb-200/40">
-        <h3 className="font-display text-2xl font-bold text-hb-900 mb-3">
+      <div className="text-center mt-12 sm:mt-16 p-8 sm:p-10 bg-gradient-to-br from-hb-50/50 to-cream-100 rounded-2xl border border-hb-200/40">
+        <h3 className="font-display text-xl sm:text-2xl font-bold text-hb-700 mb-3">
           Something special in mind?
         </h3>
-        <p className="text-text/50 font-body mb-6 max-w-md mx-auto">
+        <p className="text-text/50 font-body mb-6 max-w-md mx-auto text-sm sm:text-base">
           Custom decoration is available for celebrations. Send us a message and
           we will work out the details.
         </p>
