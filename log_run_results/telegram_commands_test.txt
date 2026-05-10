@@ -1,0 +1,35 @@
+=== Telegram Bot Commands Test Results (May 10, 2026) ===
+
+Owner ID: 810662667
+Bot: @happycake_us_owner_bot
+
+--- /start ---
+HappyCake Owner Bot
+Commands:
+/today — Daily briefing
+/inbox — Pending Tier-C items
+/capacity — Kitchen capacity
+/spend — Marketing summary
+/run_marketing — Run marketing cycle
+/help — Show this message
+
+--- /today ---
+Daily Briefing — May 10, 2026
+Revenue: $275.00 (5 orders)
+Top seller: cake "Honey" — 5/5 orders today
+Kitchen: 125/420 min (30%), 5 tickets queued, 0 ready
+Needs attention: 5 open orders not yet confirmed, no marketing campaigns run
+— the HappyCake team
+
+--- /inbox ---
+No pending items. All clear!
+
+--- /capacity ---
+HappyCake Kitchen — May 10, 2026
+Tickets today: 5 (all queued)
+Capacity used: 125 min / 420 min (30%)
+Remaining capacity: 295 min
+Status: On track, no overflow
+5 open slots available.
+
+=== ALL COMMANDS PASSED ===

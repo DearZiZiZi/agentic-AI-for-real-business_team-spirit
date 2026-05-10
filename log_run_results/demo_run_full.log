@@ -1,0 +1,62 @@
+🎂 HappyCake Demo — Full Customer Journey
+===========================================
+
+1. Health check...
+{
+    "ok": true,
+    "service": "happycake-api",
+    "version": "1.0.0"
+}
+
+2. Browsing catalog (as AI customer)...
+{
+    "content": [
+        {
+            "type": "text",
+            "text": "{\n  \"mode\": \"simulated\",\n  \"catalog\": [\n    {\n      \"id\": \"sq_item_honey_cake_slice\",\n      \"variationId\": \"sq_var_honey_cake_slice\",\n      \"name\": \"Honey cake slice\",\n      \"category\": \"slices\",\n      \"priceCents\": 850,\n      \"description\": \"Individual honey cake slice for walk-ins and quick pickup.\",\n      \"kitchenProductId\": \"honey-cake-slice\"\n    },\n    {\n      \"id\": \"sq_item_whole_honey_cake\",\n      \"variationId\": \"sq_var_whole_honey_cake\",\n      \"name\": \"Whole honey cake\",\n      \"category\": \"whole-cakes\",\n      \"priceCents\": 5500,\n      \"description\": \"Classic whole honey cake for family orders.\",\n      \"kitchenProductId\": \"whole-honey-cake\"\n    },\n    {\n      \"id\": \"sq_item_pistachio_roll\",\n      \"variationId\": \"sq_var_pistachio_roll\",\n      \"name\": \"Pistachio roll\",\n      \"category\": \"slices\",\n      \"priceCents\": 950,\n      \"description\": \"Premium pistachio roll dessert.\",\n      \"kitchenProductId\": \"pistachio-roll\"\n    },\n    {\n      \"id\": \"sq_item_custom_birthday_cake\",\n      \"variationId\": \"sq_var_custom_birthday_cake\",\n      \"name\": \"Custom birthday cake\",\n      \"category\": \"custom\",\n      \"priceCents\": 9500,\n      \"description\": \"Custom celebration cake with human approval required.\",\n      \"kitchenProductId\": \"custom-birthday-cake\"\n    },\n    {\n      \"id\": \"sq_item_office_dessert_box\",\n      \"variationId\": \"sq_var_office_dessert_box\",\n      \"name\": \"Office dessert box\",\n      \"category\": \"catering\",\n      \"priceCents\": 12000,\n      \"description\": \"Assorted dessert box for offices and events.\",\n      \"kitchenProductId\": \"office-dessert-box\"\n    }\n  ]\n}"
+        }
+    ]
+}
+
+3. Checking availability...
+{
+    "content": [
+        {
+            "type": "text",
+            "text": "{\n  \"tickets\": 2,\n  \"byStatus\": {\n    \"queued\": 2\n  },\n  \"events\": 0,\n  \"dailyCapacityMinutes\": 420,\n  \"usedPrepMinutes\": 50,\n  \"remainingCapacityMinutes\": 370,\n  \"overCapacity\": false\n}"
+        }
+    ]
+}
+
+4. Customer chat — asking about cakes...
+{
+    "reply": "```json\n{\n  \"reply\": \"Great timing \u2014 we have capacity this week and can have your cake ready before Saturday.\\n\\nHere's what we carry:\\n\\n- Cake \\\"Honey\\\" (whole) \u2014 $55. Our classic, rich honey layers. Perfect for a crowd.\\n- Cake \\\"Pistachio Roll\\\" (slice) \u2014 $9.50 per slice, great as an add-on.\\n- Custom birthday cake \u2014 $95. A celebration cake built to your specs, but this one needs a quick check with our team before we confirm.\\n- Office dessert box \u2014 $120. Assorted sweets for bigger parties.\\n\\nFor a birthday party, most guests go with the whole cake \\\"Honey\\\" ($55) \u2014 it serves 8\u201310 people comfortably.\\n\\nIf you want something custom (a specific flavor, size, or decoration), just say the word and we'll loop in the team.\\n\\nReady to order? Visit happycake.us or message us on WhatsApp and we'll get it on the schedule. \u2014 the HappyCake team\",\n  \"intent\": \"browse\",\n  \"escalation_required\": false,\n  \"order_id\": null,\n  \"order_total_cents\": 0,\n  \"is_standard_sku\": true,\n  \"suggested_actions\": [\"customer_selects_cake\", \"create_order_if_standard\", \"escalate_if_custom\"],\n  \"tools_called\": [\"square_list_catalog\", \"kitchen_get_production_summary\"]\n}\n```",
+    "conversation_id": "demo-1",
+    "trace_id": "trace_de0c19a863e8",
+    "tier": "A",
+    "escalation_required": false,
+    "suggested_actions": []
+}
+
+5. Customer follows up — placing an order...
+{
+    "reply": "```json\n{\n  \"reply\": \"Hi Sarah! Thanks for reaching out.\\n\\nI checked our catalog and we don't carry an 8-inch chocolate cake as a standard item. Our current whole cakes are:\\n\\n- Cake \\\"Honey\\\" (whole) \u2014 $55\\n- Custom birthday cake \u2014 $95 (built to your specs, needs team confirmation)\\n\\nIf you'd like a chocolate cake for Saturday 3 PM, that would be a custom order \u2014 and I want to make sure we can actually do it before I promise anything. I'm looping in our team right now to confirm availability and get back to you quickly.\\n\\nOur kitchen has good capacity this week, so there's a solid chance we can make it work. You'll hear back within a few hours.\\n\\n\u2014 the HappyCake team\",\n  \"intent\": \"order\",\n  \"escalation_required\": true,\n  \"order_id\": null,\n  \"order_total_cents\": 0,\n  \"is_standard_sku\": false,\n  \"suggested_actions\": [\"escalate_to_owner\", \"await_owner_confirmation_before_creating_order\"],\n  \"tools_called\": [\"square_list_catalog\", \"kitchen_get_production_summary\"]\n}\n```",
+    "conversation_id": "demo-1",
+    "trace_id": "trace_066ac216b911",
+    "tier": "A",
+    "escalation_required": false,
+    "suggested_actions": []
+}
+
+6. AI customer places order via agent API...
+{
+    "trace_id": "trace_7fd33e815e1f",
+    "result": "```json\n{\n  \"order_id\": \"sq_order_1778416539272\",\n  \"product\": \"Whole honey cake\",\n  \"total_cents\": 5500,\n  \"pickup\": \"2026-05-16 15:00\",\n  \"status\": \"pending\",\n  \"message\": \"Order placed for Test Buyer. Kitchen ticket kt_1778416542271 queued. Pickup at 15:00 on May 16. Note: 8-inch please.\"\n}\n```"
+}
+
+============================================
+✅ Demo complete!
+Trace ID: trace_de0c19a863e8
+
+View the audit trail:
+  curl -H "Authorization: Bearer $INTERNAL_AUDIT_TOKEN" "http://localhost:8080/internal/audit?trace_id=trace_de0c19a863e8" | jq .

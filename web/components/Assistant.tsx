@@ -13,7 +13,7 @@ export function Assistant() {
     {
       role: "assistant",
       content:
-        "Welcome to HappyCake. How can we help you today? Browse our cakes, ask about availability, or place an order.",
+        "Welcome to HappyCake! How can we help you today? Browse our cakes, ask about availability, or place an order.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -73,20 +73,23 @@ export function Assistant() {
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-hb-700 text-cream-50 rounded-full shadow-lg hover:bg-hb-500 transition-all z-50 flex items-center justify-center text-xl font-body"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-coral text-cream-50 rounded-full shadow-lg hover:bg-coral-light hover:text-hb-900 transition-all z-50 flex items-center justify-center text-xl font-body hover:scale-105"
         aria-label={open ? "Close assistant" : "Chat with HappyCake"}
       >
-        {open ? "✕" : "◆"}
+        {open ? "✕" : "💬"}
       </button>
 
       {open && (
-        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] h-[500px] bg-white rounded-xl shadow-2xl border border-hb-200 flex flex-col z-50 overflow-hidden">
-          <div className="bg-hb-900 text-cream-50 px-4 py-3 flex items-center gap-3">
+        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] h-[520px] bg-white rounded-2xl shadow-2xl border border-hb-200/40 flex flex-col z-50 overflow-hidden">
+          <div className="bg-gradient-to-r from-hb-900 to-hb-700 text-cream-50 px-5 py-4 flex items-center gap-3">
+            <div className="w-9 h-9 bg-coral/20 rounded-full flex items-center justify-center text-sm">
+              🎂
+            </div>
             <div>
-              <div className="font-display font-semibold text-sm">
+              <div className="font-display font-semibold text-base">
                 HappyCake Assistant
               </div>
-              <div className="text-xs text-cream-200 font-body">
+              <div className="text-xs text-hb-200 font-body">
                 Cakes, prices, availability, orders
               </div>
             </div>
@@ -99,10 +102,10 @@ export function Assistant() {
                 className={`flex ${msg.role === "customer" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[80%] px-3 py-2 rounded-lg text-sm font-body ${
+                  className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm font-body leading-relaxed ${
                     msg.role === "customer"
-                      ? "bg-hb-700 text-cream-50 rounded-br-sm"
-                      : "bg-cream-100 text-text rounded-bl-sm"
+                      ? "bg-hb-700 text-cream-50 rounded-br-md"
+                      : "bg-white text-text rounded-bl-md shadow-sm border border-hb-200/20"
                   }`}
                 >
                   {msg.content}
@@ -111,7 +114,7 @@ export function Assistant() {
             ))}
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-cream-100 text-text px-3 py-2 rounded-lg text-sm font-body">
+                <div className="bg-white text-text px-4 py-2.5 rounded-2xl rounded-bl-md text-sm font-body shadow-sm border border-hb-200/20">
                   <span className="animate-pulse">Checking...</span>
                 </div>
               </div>
@@ -119,20 +122,20 @@ export function Assistant() {
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="border-t border-hb-200/30 p-3 flex gap-2 bg-white">
+          <div className="border-t border-hb-200/20 p-3 flex gap-2 bg-white">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Ask about our cakes..."
-              className="flex-1 px-3 py-2 border border-hb-200 rounded text-sm font-body focus:outline-none focus:border-hb-500 bg-cream-50"
+              className="flex-1 px-4 py-2.5 border border-hb-200/40 rounded-xl text-sm font-body focus:outline-none focus:border-hb-500 focus:ring-2 focus:ring-hb-500/10 bg-cream-50 transition-all"
               disabled={loading}
             />
             <button
               onClick={sendMessage}
               disabled={loading || !input.trim()}
-              className="bg-hb-700 text-cream-50 px-4 py-2 rounded text-sm font-body font-medium hover:bg-hb-500 disabled:opacity-50 transition-colors"
+              className="bg-coral text-cream-50 px-5 py-2.5 rounded-xl text-sm font-body font-semibold hover:bg-coral-light hover:text-hb-900 disabled:opacity-40 transition-all"
             >
               Send
             </button>

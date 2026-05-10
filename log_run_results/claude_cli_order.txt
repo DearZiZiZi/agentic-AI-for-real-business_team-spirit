@@ -1,0 +1,9 @@
+Order placed and kitchen ticket queued.
+
+**Order summary for Evaluator Test:**
+- Cake "Honey" — whole, 1 cake — $55.00
+- Pickup: Saturday, May 16 at 3:00 PM
+- Order ID: `sq_order_1778416747817`
+- Kitchen ticket: `kt_1778416751056` (queued)
+
+— the HappyCake team

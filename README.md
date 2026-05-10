@@ -1,4 +1,6 @@
-# HappyCake US — Agentic Sales System
+# HappyCake US — Agentic AI for Real Business
+
+> **[Steppe Business Club Hackathon](https://www.steppebusinessclub.com/hackathon)**
 
 End-to-end AI sales system for HappyCake US (Sugar Land, TX). Built on the Steppe Business Club hackathon runtime: **Claude Code CLI (Opus 4.7) + Telegram + Cloudflare Tunnel + hosted MCP sandbox**.
 
@@ -78,7 +80,7 @@ After `make start` you should see:
 4. **Drive a scenario:** `make demo` runs a scripted Instagram-DM-to-pickup journey and prints a `trace_id`.
 5. **Read the evidence:**
    ```bash
-   curl "http://localhost:8080/internal/audit?trace_id=<id>&token=$INTERNAL_AUDIT_TOKEN" | jq .
+   curl -H "Authorization: Bearer $INTERNAL_AUDIT_TOKEN" "http://localhost:8080/internal/audit?trace_id=<id>" | jq .
    ```
 6. **Open Telegram:** `/today` on `@happycake_us_owner_bot` returns the daily briefing.
 

@@ -126,7 +126,7 @@ Key endpoints:
 - `GET /api/agents/catalog` — proxies `square_list_catalog`, returns plain JSON for AI customers
 - `GET /api/agents/availability?date=YYYY-MM-DD` — proxies `kitchen_get_production_summary`
 - `POST /api/agents/order-intent` — agent-friendly write endpoint for AI customers; same path as the chat-driven path internally
-- `GET /internal/audit?trace_id=...` — gated by `INTERNAL_AUDIT_TOKEN`, returns timeline JSON
+- `GET /internal/audit?trace_id=...` — gated by `Authorization: Bearer <INTERNAL_AUDIT_TOKEN>`, returns timeline JSON
 
 ### 6.2 `api/claude_runner.py`
 
@@ -262,7 +262,7 @@ What we don't build: dead-letter queues, circuit breakers, exponential health ch
 
 - Every secret via env. `.env.example` ships placeholders only.
 - `.env` and `logs/` in `.gitignore` from the first commit.
-- `INTERNAL_AUDIT_TOKEN` gates `/internal/audit`.
+- `INTERNAL_AUDIT_TOKEN` gates `/internal/*` endpoints via `Authorization: Bearer` header.
 - HMAC validation on webhooks: implemented, secret pulled from env. If sandbox doesn't sign, we accept all and log a warning.
 - Telegram bot checks `TELEGRAM_OWNER_USER_ID` before running owner commands.
 

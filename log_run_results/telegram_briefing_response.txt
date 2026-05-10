@@ -1,0 +1,25 @@
+/today command response (May 10, 2026):
+
+Daily Briefing — May 10, 2026
+
+Revenue: $275.00 (5 orders)
+Top seller: cake "Honey" — 5/5 orders today
+
+Kitchen today:
+- Capacity used: 125 of 420 min (30% — plenty of room)
+- Tickets queued: 5
+- Ready for pickup: 0
+- Over capacity: No
+
+Needs attention:
+- All 5 orders are still open — none confirmed or sent to kitchen yet
+- 5 kitchen tickets are queued with 0 events processed — handoff has not been triggered
+- Upcoming pickups: Sarah (May 11 @ 2 PM), two orders for May 16 @ 3 PM — confirm and ticket these today
+- No marketing campaigns have run yet — no leads or ROAS data available
+
+Marketing:
+- Last run: No campaigns on record
+- Leads: —
+- ROAS: —
+
+— the HappyCake team

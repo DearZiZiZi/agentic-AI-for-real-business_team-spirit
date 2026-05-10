@@ -1,0 +1,435 @@
+{
+    "events": [
+        {
+            "trace_id": "trace_de0c19a863e8",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "demo-1",
+                "channel": "website",
+                "message_length": 70
+            },
+            "created_at": 1778416477.79404,
+            "iso": "2026-05-10T12:34:37Z"
+        },
+        {
+            "trace_id": "trace_de0c19a863e8",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 1428
+            },
+            "created_at": 1778416477.795048,
+            "iso": "2026-05-10T12:34:37Z"
+        },
+        {
+            "trace_id": "trace_de0c19a863e8",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 2120,
+                "has_result": true
+            },
+            "created_at": 1778416503.490408,
+            "iso": "2026-05-10T12:35:03Z"
+        },
+        {
+            "trace_id": "trace_de0c19a863e8",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "A",
+                "reason": "Informational reply, no order action",
+                "intent": "general"
+            },
+            "created_at": 1778416503.491373,
+            "iso": "2026-05-10T12:35:03Z"
+        },
+        {
+            "trace_id": "trace_de0c19a863e8",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 1162,
+                "tier": "A",
+                "escalation": false
+            },
+            "created_at": 1778416503.491615,
+            "iso": "2026-05-10T12:35:03Z"
+        },
+        {
+            "trace_id": "trace_066ac216b911",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "demo-1",
+                "channel": "website",
+                "message_length": 86
+            },
+            "created_at": 1778416503.543534,
+            "iso": "2026-05-10T12:35:03Z"
+        },
+        {
+            "trace_id": "trace_066ac216b911",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 2901
+            },
+            "created_at": 1778416503.5437398,
+            "iso": "2026-05-10T12:35:03Z"
+        },
+        {
+            "trace_id": "trace_066ac216b911",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 1951,
+                "has_result": true
+            },
+            "created_at": 1778416524.8563688,
+            "iso": "2026-05-10T12:35:24Z"
+        },
+        {
+            "trace_id": "trace_066ac216b911",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "A",
+                "reason": "Informational reply, no order action",
+                "intent": "general"
+            },
+            "created_at": 1778416524.857682,
+            "iso": "2026-05-10T12:35:24Z"
+        },
+        {
+            "trace_id": "trace_066ac216b911",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 987,
+                "tier": "A",
+                "escalation": false
+            },
+            "created_at": 1778416524.857962,
+            "iso": "2026-05-10T12:35:24Z"
+        },
+        {
+            "trace_id": "trace_7fd33e815e1f",
+            "agent": "api",
+            "event": "order_intent",
+            "payload": {
+                "idempotency_key": "demo-order-001",
+                "body": {
+                    "product": "honey cake",
+                    "quantity": 1,
+                    "pickup_date": "2026-05-16",
+                    "pickup_time": "15:00",
+                    "customer_name": "Test Buyer",
+                    "notes": "8-inch please"
+                }
+            },
+            "created_at": 1778416524.875967,
+            "iso": "2026-05-10T12:35:24Z"
+        },
+        {
+            "trace_id": "trace_7fd33e815e1f",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 656
+            },
+            "created_at": 1778416524.876195,
+            "iso": "2026-05-10T12:35:24Z"
+        },
+        {
+            "trace_id": "trace_7fd33e815e1f",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 1217,
+                "has_result": true
+            },
+            "created_at": 1778416546.157974,
+            "iso": "2026-05-10T12:35:46Z"
+        },
+        {
+            "trace_id": "trace_7fd33e815e1f",
+            "agent": "api",
+            "event": "order_intent_result",
+            "payload": {
+                "ok": true
+            },
+            "created_at": 1778416546.158926,
+            "iso": "2026-05-10T12:35:46Z"
+        },
+        {
+            "trace_id": "trace_95b99fe3f205",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "test-complaint",
+                "channel": "website",
+                "message_length": 64
+            },
+            "created_at": 1778416569.140108,
+            "iso": "2026-05-10T12:36:09Z"
+        },
+        {
+            "trace_id": "trace_95b99fe3f205",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 1424
+            },
+            "created_at": 1778416569.140309,
+            "iso": "2026-05-10T12:36:09Z"
+        },
+        {
+            "trace_id": "trace_95b99fe3f205",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 1563,
+                "has_result": true
+            },
+            "created_at": 1778416577.963843,
+            "iso": "2026-05-10T12:36:17Z"
+        },
+        {
+            "trace_id": "trace_95b99fe3f205",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "C",
+                "reason": "Customer requested human handoff",
+                "intent": "general"
+            },
+            "created_at": 1778416577.964371,
+            "iso": "2026-05-10T12:36:17Z"
+        },
+        {
+            "trace_id": "trace_95b99fe3f205",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 616,
+                "tier": "C",
+                "escalation": true
+            },
+            "created_at": 1778416577.964517,
+            "iso": "2026-05-10T12:36:17Z"
+        },
+        {
+            "trace_id": "trace_a3eeb0bad23d",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "test-wedding",
+                "channel": "website",
+                "message_length": 70
+            },
+            "created_at": 1778416577.978293,
+            "iso": "2026-05-10T12:36:17Z"
+        },
+        {
+            "trace_id": "trace_a3eeb0bad23d",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 1434
+            },
+            "created_at": 1778416577.978534,
+            "iso": "2026-05-10T12:36:17Z"
+        },
+        {
+            "trace_id": "trace_a3eeb0bad23d",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 2204,
+                "has_result": true
+            },
+            "created_at": 1778416605.4123468,
+            "iso": "2026-05-10T12:36:45Z"
+        },
+        {
+            "trace_id": "trace_a3eeb0bad23d",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "C",
+                "reason": "Custom cake request",
+                "intent": "general"
+            },
+            "created_at": 1778416605.4131572,
+            "iso": "2026-05-10T12:36:45Z"
+        },
+        {
+            "trace_id": "trace_a3eeb0bad23d",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 1247,
+                "tier": "C",
+                "escalation": true
+            },
+            "created_at": 1778416605.413364,
+            "iso": "2026-05-10T12:36:45Z"
+        },
+        {
+            "trace_id": "trace_c79b78bd4abc",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "test-browse",
+                "channel": "website",
+                "message_length": 34
+            },
+            "created_at": 1778416605.429067,
+            "iso": "2026-05-10T12:36:45Z"
+        },
+        {
+            "trace_id": "trace_c79b78bd4abc",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 1361
+            },
+            "created_at": 1778416605.429282,
+            "iso": "2026-05-10T12:36:45Z"
+        },
+        {
+            "trace_id": "trace_c79b78bd4abc",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 1935,
+                "has_result": true
+            },
+            "created_at": 1778416620.502442,
+            "iso": "2026-05-10T12:37:00Z"
+        },
+        {
+            "trace_id": "trace_c79b78bd4abc",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "A",
+                "reason": "Informational reply, no order action",
+                "intent": "general"
+            },
+            "created_at": 1778416620.503087,
+            "iso": "2026-05-10T12:37:00Z"
+        },
+        {
+            "trace_id": "trace_c79b78bd4abc",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 970,
+                "tier": "A",
+                "escalation": false
+            },
+            "created_at": 1778416620.503217,
+            "iso": "2026-05-10T12:37:00Z"
+        },
+        {
+            "trace_id": "trace_ef2f67a28854",
+            "agent": "api",
+            "event": "chat_request",
+            "payload": {
+                "conversation_id": "test-order",
+                "channel": "website",
+                "message_length": 81
+            },
+            "created_at": 1778416620.518399,
+            "iso": "2026-05-10T12:37:00Z"
+        },
+        {
+            "trace_id": "trace_ef2f67a28854",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 1454
+            },
+            "created_at": 1778416620.518616,
+            "iso": "2026-05-10T12:37:00Z"
+        },
+        {
+            "trace_id": "trace_ef2f67a28854",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 1641,
+                "has_result": true
+            },
+            "created_at": 1778416644.563657,
+            "iso": "2026-05-10T12:37:24Z"
+        },
+        {
+            "trace_id": "trace_ef2f67a28854",
+            "agent": "api",
+            "event": "tier_classified",
+            "payload": {
+                "tier": "A",
+                "reason": "Informational reply, no order action",
+                "intent": "general"
+            },
+            "created_at": 1778416644.564096,
+            "iso": "2026-05-10T12:37:24Z"
+        },
+        {
+            "trace_id": "trace_ef2f67a28854",
+            "agent": "api",
+            "event": "chat_response",
+            "payload": {
+                "reply_length": 696,
+                "tier": "A",
+                "escalation": false
+            },
+            "created_at": 1778416644.5642781,
+            "iso": "2026-05-10T12:37:24Z"
+        },
+        {
+            "trace_id": "trace_e5c60ca8301a",
+            "agent": "bot",
+            "event": "briefing_request",
+            "payload": {},
+            "created_at": 1778417069.195877,
+            "iso": "2026-05-10T12:44:29Z"
+        },
+        {
+            "trace_id": "trace_e5c60ca8301a",
+            "agent": "claude_runner",
+            "event": "invoke",
+            "payload": {
+                "prompt_length": 676
+            },
+            "created_at": 1778417069.196461,
+            "iso": "2026-05-10T12:44:29Z"
+        },
+        {
+            "trace_id": "trace_e5c60ca8301a",
+            "agent": "claude_runner",
+            "event": "response",
+            "payload": {
+                "output_length": 1694,
+                "has_result": true
+            },
+            "created_at": 1778417093.3478951,
+            "iso": "2026-05-10T12:44:53Z"
+        },
+        {
+            "trace_id": "trace_e5c60ca8301a",
+            "agent": "bot",
+            "event": "briefing_response",
+            "payload": {
+                "length": 776
+            },
+            "created_at": 1778417093.348829,
+            "iso": "2026-05-10T12:44:53Z"
+        }
+    ],
+    "count": 38
+}

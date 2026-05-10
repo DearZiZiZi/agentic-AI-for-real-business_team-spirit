@@ -28,15 +28,20 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 BOT_TOKEN = os.environ.get("TELEGRAM_OWNER_BOT_TOKEN", "")
-OWNER_ID = int(os.environ.get("TELEGRAM_OWNER_USER_ID", "0"))
+_owner_id_str = os.environ.get("TELEGRAM_OWNER_USER_ID", "0").strip()
+OWNER_ID = int(_owner_id_str) if _owner_id_str else 0
 
 PENDING_APPROVALS: dict[str, dict] = {}
 
 
 def owner_only(func):
     async def wrapper(update: Update, context: ContextTypes.DEFAULT_TYPE):
-        if update.effective_user.id != OWNER_ID:
-            await update.message.reply_text("⛔ This bot is for the bakery owner only.")
+        user = update.effective_user
+        if user.id != OWNER_ID:
+            logger.info(f"Rejected user {user.id} ({user.full_name})")
+            await update.message.reply_text(
+                f"⛔ This bot is for the bakery owner only.\n\nYour Telegram user ID: {user.id}\n(Set TELEGRAM_OWNER_USER_ID in .env to this value)"
+            )
             return
         return await func(update, context)
     return wrapper
@@ -222,8 +227,7 @@ def main():
         print("ERROR: TELEGRAM_OWNER_BOT_TOKEN not set in .env")
         sys.exit(1)
     if not OWNER_ID:
-        print("ERROR: TELEGRAM_OWNER_USER_ID not set in .env")
-        sys.exit(1)
+        logger.warning("WARNING: TELEGRAM_OWNER_USER_ID not set — bot will start but reject all messages. Send /start to see your user ID.")
 
     app = Application.builder().token(BOT_TOKEN).build()
 
