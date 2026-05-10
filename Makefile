@@ -6,7 +6,7 @@ setup:
 	cd web && npm install
 
 start-api:
-	uvicorn api.main:app --host 0.0.0.0 --port 8080 --reload
+	.venv/bin/uvicorn api.main:app --host 0.0.0.0 --port 8080 --reload
 
 start-bot:
 	.venv/bin/python -m bot.owner_bot
