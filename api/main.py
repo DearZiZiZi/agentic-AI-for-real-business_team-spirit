@@ -162,7 +162,7 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 # ---------------------------------------------------------------------------
 # App
 # ---------------------------------------------------------------------------
-app = FastAPI(title="Happy Cake API", version=API_VERSION)
+app = FastAPI(title="HappyCake API", version=API_VERSION)
 
 app.add_middleware(
     CORSMiddleware,
