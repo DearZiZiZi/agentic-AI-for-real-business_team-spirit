@@ -6,34 +6,6 @@
     "1024": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/logo/happy-cake-logo-1024.png",
     "256": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/logo/happy-cake-logo-256.png"
   },
-  "hero": [
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/hero/happy-cake-hero-01.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/hero/happy-cake-hero-02.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/hero/happy-cake-hero-03.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/hero/happy-cake-hero-04.webp"
-  ],
-  "products": [
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-01.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-02.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-03.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-04.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-05.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-06.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-07.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-08.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-09.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-10.webp"
-  ],
-  "social": [
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-01.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-02.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-03.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-04.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-05.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-06.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-07.webp",
-    "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-08.webp"
-  ],
   "colors": {
     "happy_sky_blue": "#00AEEA",
     "chocolate_brown": "#6B3A1E",

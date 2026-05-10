@@ -1,76 +1,79 @@
-{
-  "items": [
-    {
-      "id": "cake-001",
-      "name": "Classic Vanilla Cake",
-      "slug": "classic-vanilla",
-      "description": "Light and fluffy vanilla sponge with buttercream frosting",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 3500},
-        {"size": "8-inch (serves 12)", "price_cents": 4500},
-        {"size": "10-inch (serves 20)", "price_cents": 5500}
-      ]
-    },
-    {
-      "id": "cake-002",
-      "name": "Chocolate Dream Cake",
-      "slug": "chocolate-dream",
-      "description": "Rich chocolate layers with ganache and chocolate buttercream",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 3800},
-        {"size": "8-inch (serves 12)", "price_cents": 4800},
-        {"size": "10-inch (serves 20)", "price_cents": 5800}
-      ]
-    },
-    {
-      "id": "cake-003",
-      "name": "Red Velvet Cake",
-      "slug": "red-velvet",
-      "description": "Classic red velvet with cream cheese frosting",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 3800},
-        {"size": "8-inch (serves 12)", "price_cents": 4800},
-        {"size": "10-inch (serves 20)", "price_cents": 5800}
-      ]
-    },
-    {
-      "id": "cake-004",
-      "name": "Honey Cake",
-      "slug": "honey-cake",
-      "description": "Traditional honey cake with layers of honey-infused sponge and cream",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 4000},
-        {"size": "8-inch (serves 12)", "price_cents": 5200},
-        {"size": "10-inch (serves 20)", "price_cents": 6500}
-      ]
-    },
-    {
-      "id": "cupcake-001",
-      "name": "Assorted Cupcakes",
-      "slug": "assorted-cupcakes",
-      "description": "Mix of vanilla, chocolate, and red velvet cupcakes",
-      "category": "cupcakes",
-      "variations": [
-        {"size": "6-pack", "price_cents": 1800},
-        {"size": "12-pack", "price_cents": 3200},
-        {"size": "24-pack", "price_cents": 5800}
-      ]
-    },
-    {
-      "id": "cake-005",
-      "name": "Strawberry Shortcake",
-      "slug": "strawberry-shortcake",
-      "description": "Fresh strawberries with whipped cream and vanilla sponge",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 4200},
-        {"size": "8-inch (serves 12)", "price_cents": 5400}
-      ]
-    }
-  ],
-  "note": "This is a fallback catalog. Live data comes from square_list_catalog via MCP."
-}
+[
+  {
+    "id": "cake-001",
+    "name": "Classic Vanilla Cake",
+    "slug": "classic-vanilla",
+    "description": "Light and fluffy vanilla sponge with buttercream frosting. A timeless favorite for any celebration.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-08.webp",
+    "variations": [
+      {"size": "6-inch (serves 8)", "price_cents": 3500},
+      {"size": "8-inch (serves 12)", "price_cents": 4500},
+      {"size": "10-inch (serves 20)", "price_cents": 5500}
+    ]
+  },
+  {
+    "id": "cake-002",
+    "name": "Whoopie Pie Cake",
+    "slug": "whoopie-pie-cake",
+    "description": "Rich chocolate sponge layered with creamy vanilla filling inspired by the classic whoopie pie dessert.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-04.webp",
+    "variations": [
+      {"size": "6-inch (serves 8)", "price_cents": 3800},
+      {"size": "8-inch (serves 12)", "price_cents": 4800},
+      {"size": "10-inch (serves 20)", "price_cents": 5800}
+    ]
+  },
+  {
+    "id": "cake-003",
+    "name": "Black Forest Cake",
+    "slug": "black-forest-cake",
+    "description": "Classic chocolate cake layered with cherries, whipped cream, and dark chocolate shavings.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-01.webp",
+    "variations": [
+      {"size": "6-inch (serves 8)", "price_cents": 3800},
+      {"size": "8-inch (serves 12)", "price_cents": 4800},
+      {"size": "10-inch (serves 20)", "price_cents": 5800}
+    ]
+  },
+  {
+    "id": "cake-004",
+    "name": "Honey Cake",
+    "slug": "honey-cake",
+    "description": "Traditional honey cake with layers of honey-infused sponge and cream. A house specialty.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-07.webp",
+    "variations": [
+      {"size": "6-inch (serves 8)", "price_cents": 4000},
+      {"size": "8-inch (serves 12)", "price_cents": 5200},
+      {"size": "10-inch (serves 20)", "price_cents": 6500}
+    ]
+  },
+  {
+    "id": "cupcake-001",
+    "name": "Laddu",
+    "slug": "laddu",
+    "description": "Traditional sweet Indian dessert bites made with rich flavors and festive ingredients. Perfect for gifting and celebrations.",
+    "category": "desserts",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-07.webp",
+    "variations": [
+      {"size": "6-pack", "price_cents": 1800},
+      {"size": "12-pack", "price_cents": 3200},
+      {"size": "24-pack", "price_cents": 5800}
+    ]
+  },
+  {
+    "id": "cake-005",
+    "name": "Strawberry Shortcake",
+    "slug": "strawberry-shortcake",
+    "description": "Fresh strawberries with whipped cream and vanilla sponge. Light, fruity, and summery.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-03.webp",
+    "variations": [
+      {"size": "6-inch (serves 8)", "price_cents": 4200},
+      {"size": "8-inch (serves 12)", "price_cents": 5400}
+    ]
+  }
+]
