@@ -37,7 +37,6 @@ Replace sandbox Square calls with production credentials:
 
 - Create production bot via @BotFather
 - Set owner's real Telegram user ID
-- Consider adding a second `@hc_inbox_bot` for read-only transcript feed
 
 ---
 
