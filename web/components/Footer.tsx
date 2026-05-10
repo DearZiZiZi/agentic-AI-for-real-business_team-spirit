@@ -60,7 +60,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm font-body">
               <li>Sugar Land, TX</li>
               <li>Instagram: @happycake.us</li>
-              <li>WhatsApp: available during business hours</li>
+              <li>WhatsApp: Available during business hours</li>
             </ul>
           </div>
         </div>

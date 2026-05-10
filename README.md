@@ -11,7 +11,7 @@ End-to-end AI sales system for HappyCake US (Sugar Land, TX). Built on the Stepp
 
 ## What this is
 
-One agent, one Telegram bot, one Python service, one Next.js website. The agent ("Concierge") handles customer chat across the website, WhatsApp, and Instagram, takes orders, and writes to the kitchen + Square + marketing simulator via the hosted MCP. Owner approves Tier-B/C orders on `@hc_owner_bot`. Every event lands in `./logs/audit.jsonl` with a `trace_id` the evaluator can grep.
+One agent, one Telegram bot, one Python service, one Next.js website. The agent ("Concierge") handles customer chat across the website, WhatsApp, and Instagram, takes orders, and writes to the kitchen + Square + marketing simulator via the hosted MCP. Owner approves Tier-B/C orders on `@happycake_us_owner_bot`. Every event lands in `./logs/audit.jsonl` with a `trace_id` the evaluator can grep.
 
 Brief explicitly allows a single super-agent. We use that to ship.
 
@@ -24,8 +24,10 @@ Brief explicitly allows a single super-agent. We use that to ship.
 - Python 3.11, Node 20, Make
 - [Claude Code CLI](https://docs.claude.com/en/docs/claude-code) authenticated with a Claude Max subscription
 - [`cloudflared`](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/install-and-setup/installation/)
-- One Telegram bot token from [@BotFather](https://t.me/BotFather) for `@hc_owner_bot`
-- Your team's `X-Team-Token` from the Steppe Business Club dashboard
+- One Telegram bot token from [@BotFather](https://t.me/BotFather) for `@happycake_us_owner_bot`
+- Registered Telegram bot "HappyCakeUS Owner Bot": http://t.me/happycake_us_owner_bot (we can transfer ownership if needed ~ after the hackathon)
+- How to get Telegram User ID? go here -> http://t.me/Getmyid_bot | send -> `/start` | then copy "Your ID".
+- Team's `X-Team-Token` from the Steppe Business Club dashboard.
 
 ### Run
 
@@ -56,7 +58,7 @@ After `make start` you should see:
 - `http://localhost:3000` — the HappyCake website
 - `http://localhost:8080/health` — API health check
 - `https://<id>.trycloudflare.com` — public tunnel URL
-- `@hc_owner_bot` online in Telegram
+- `@happycake_us_owner_bot` online in Telegram
 
 ---
 
@@ -78,7 +80,7 @@ After `make start` you should see:
    ```bash
    curl "http://localhost:8080/internal/audit?trace_id=<id>&token=$INTERNAL_AUDIT_TOKEN" | jq .
    ```
-6. **Open Telegram:** `/today` on `@hc_owner_bot` returns the daily briefing.
+6. **Open Telegram:** `/today` on `@happycake_us_owner_bot` returns the daily briefing.
 
 ---
 
@@ -106,7 +108,7 @@ make test-assistant
 
 | Bot | Username | Role |
 |---|---|---|
-| Owner | `@hc_owner_bot` | All owner interaction: daily briefing, order approvals, marketing controls, ad-hoc queries |
+| Owner | `@happycake_us_owner_bot` | All owner interaction: daily briefing, order approvals, marketing controls, ad-hoc queries |
 
 One bot is enough. The brief allows it ("one super-agent"). If we have time we add a read-only `@hc_inbox_bot` as a transcript feed.
 

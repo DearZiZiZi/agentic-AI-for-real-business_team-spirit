@@ -1,52 +1,71 @@
 [
   {
-    "id": "sq_item_honey_cake_slice",
-    "name": "Cake \"Honey\" — slice",
-    "slug": "honey-cake-slice",
-    "description": "Individual honey cake slice for walk-ins and quick pickup.",
-    "category": "slices",
+    "id": "cake-001",
+    "name": "Classic Vanilla Cake",
+    "slug": "classic-vanilla",
+    "description": "Light and fluffy vanilla sponge with buttercream frosting. A timeless favorite for any celebration.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-08.webp",
     "variations": [
       {"size": "1 slice", "price_cents": 850}
     ]
   },
   {
-    "id": "sq_item_whole_honey_cake",
-    "name": "Cake \"Honey\" — whole",
-    "slug": "whole-honey-cake",
-    "description": "Classic whole honey cake — six layers of golden honey biscuit, soft custard between every one, walnuts pressed lightly into the top. 1.2 kg.",
-    "category": "whole-cakes",
+    "id": "cake-002",
+    "name": "Whoopie Pie Cake",
+    "slug": "whoopie-pie-cake",
+    "description": "Rich chocolate sponge layered with creamy vanilla filling inspired by the classic whoopie pie dessert.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-04.webp",
     "variations": [
       {"size": "1.2 kg (serves 10)", "price_cents": 5500}
     ]
   },
   {
-    "id": "sq_item_pistachio_roll",
-    "name": "Cake \"Pistachio Roll\"",
-    "slug": "pistachio-roll",
-    "description": "Light meringue, butter cream, the sour-sweet of fresh raspberry. 1.0 kg.",
-    "category": "slices",
+    "id": "cake-003",
+    "name": "Black Forest Cake",
+    "slug": "black-forest-cake",
+    "description": "Classic chocolate cake layered with cherries, whipped cream, and dark chocolate shavings.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-01.webp",
     "variations": [
       {"size": "1 slice", "price_cents": 950}
     ]
   },
   {
-    "id": "sq_item_custom_birthday_cake",
-    "name": "Custom birthday cake",
-    "slug": "custom-birthday-cake",
-    "description": "Custom celebration cake with your choice of flavours and decoration. Requires consultation.",
-    "category": "custom",
+    "id": "cake-004",
+    "name": "Honey Cake",
+    "slug": "honey-cake",
+    "description": "Traditional honey cake with layers of honey-infused sponge and cream. A house specialty.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-07.webp",
     "variations": [
       {"size": "Custom (serves 10-15)", "price_cents": 9500}
     ]
   },
   {
-    "id": "sq_item_office_dessert_box",
-    "name": "Office dessert box",
-    "slug": "office-dessert-box",
-    "description": "Assorted dessert box for offices and events. A selection of our best slices and pastries.",
-    "category": "catering",
+    "id": "cupcake-001",
+    "name": "Laddu",
+    "slug": "laddu",
+    "description": "Traditional sweet Indian dessert bites made with rich flavors and festive ingredients. Perfect for gifting and celebrations.",
+    "category": "desserts",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/products/happy-cake-product-07.webp",
     "variations": [
-      {"size": "Box (serves 8-10)", "price_cents": 12000}
+      {"size": "6-pack", "price_cents": 1800},
+      {"size": "12-pack", "price_cents": 3200},
+      {"size": "24-pack", "price_cents": 5800}
+    ]
+  },
+  {
+    "id": "cake-005",
+    "name": "Strawberry Shortcake",
+    "slug": "strawberry-shortcake",
+    "description": "Fresh strawberries with whipped cream and vanilla sponge. Light, fruity, and summery.",
+    "category": "cakes",
+    "image": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/social/happy-cake-social-03.webp",
+    "variations": [
+      {"size": "6-inch (serves 8)", "price_cents": 4200},
+      {"size": "8-inch (serves 12)", "price_cents": 5400}
     ]
   }
 ]

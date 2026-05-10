@@ -18,11 +18,11 @@ Minimal, demo-ready system for the Steppe Business Club hackathon. One agent, on
 
 ## 2. Decision: one agent, one bot
 
-We use **one agent** ("Concierge") with **one Telegram bot** (`@hc_owner_bot`). The brief allows it ("one super-agent that handles all four"). It's the smallest design that hits every outcome:
+We use **one agent** ("Concierge") with **one Telegram bot** (`@happycake_us_owner_bot`). The brief allows it ("one super-agent that handles all four"). It's the smallest design that hits every outcome:
 
 - Customer chat across web/WhatsApp/Instagram → same agent, different system prompt context per channel.
 - Order taking, kitchen handoff, marketing run, owner Q&A → all via slash commands defined in `.claude/commands/`.
-- Owner approvals & briefing → on the same `@hc_owner_bot`.
+- Owner approvals & briefing → on the same `@happycake_us_owner_bot`.
 
 Splitting into multiple agents/bots is a 24-hour expense we can't afford. If we have time at the end, we add a second `@hc_inbox_bot` as a read-only transcript feed.
 
@@ -65,7 +65,7 @@ Splitting into multiple agents/bots is a 24-hour expense we can't afford. If we 
                     │ Telegram bot │
                     │ python-telegram-bot
                     │ owner_bot.py │
-                    │ → @hc_owner_bot
+                    │ → @happycake_us_owner_bot
                     └──────────────┘
 
 State: ./logs/audit.jsonl (append-only) + ./data/state.json (latest snapshot).

@@ -1,4 +1,4 @@
-# HappyCake US — Brand Voice Reference
+# Happy Cake US — Brand Voice & Identity
 
 ## Brand Name
 **HappyCake** — one word, two capitals. Never "Happy Cake", "HC", "happycake", "HAPPYCAKE".
@@ -21,6 +21,20 @@ Our voice tells, explains, and brings warm emotion. Friendly and easy to underst
 - Close with: "Order on the site at happycake.us or send a message on WhatsApp."
 - Three emojis maximum. Often zero.
 - Always English.
+
+## Official Color Palette
+- **Happy Sky Blue** (#00AEEA): Primary wordmark accent, joyful CTAs
+- **Chocolate Brown** (#6B3A1E): Cake wordmark, warmth, dessert cues
+- **Vanilla Cream** (#FFF7EA): Backgrounds, cards, softer sections
+- **Bakery White** (#FFFFFF): Logo safe space, clean product surfaces
+- **Berry Accent** (#E94B7B): Sparingly for promos, stickers, social accents
+
+## Asset Library
+- **Logo files**: 256px, 512px, 1024px PNG (optimized wordmark)
+- **Hero images**: 4 curated hero shots (1600×1000 WebP)
+- **Product photos**: 10 professional product shots (1200×1200 WebP)
+- **Social crops**: 8 Instagram-ready crops (1080×1080 WebP)
+- **Base URL**: https://www.steppebusinessclub.com/hackathon-assets/happy-cake/
 
 ## Approved claims
 - Only state what the MCP catalog returns

@@ -1,28 +1,16 @@
 {
+  "baseUrl": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/",
   "logo": {
-    "primary": "web/public/brand/logo.png",
-    "white": "web/public/brand/logo-white.png"
-  },
-  "hero": "web/public/brand/hero.jpg",
-  "products": [
-    "web/public/brand/vanilla-cake.jpg",
-    "web/public/brand/chocolate-cake.jpg",
-    "web/public/brand/red-velvet.jpg",
-    "web/public/brand/honey-cake.jpg",
-    "web/public/brand/cupcakes.jpg",
-    "web/public/brand/strawberry-shortcake.jpg"
-  ],
-  "social": {
-    "instagram": "web/public/brand/social-ig.jpg",
-    "facebook": "web/public/brand/social-fb.jpg"
+    "primary": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/logo/happy-cake-logo-512.png",
+    "white": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/logo/happy-cake-logo-512.png",
+    "1024": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/logo/happy-cake-logo-1024.png",
+    "256": "https://www.steppebusinessclub.com/hackathon-assets/happy-cake/logo/happy-cake-logo-256.png"
   },
   "colors": {
-    "happy_blue_900": "#0E2A3C",
-    "happy_blue_700": "#1B4868",
-    "happy_blue_500": "#3B7BA8",
-    "cream_50": "#FBF6E8",
-    "cream_100": "#F4ECD3",
-    "coral": "#E08066",
-    "green": "#6E9D74"
+    "happy_sky_blue": "#00AEEA",
+    "chocolate_brown": "#6B3A1E",
+    "vanilla_cream": "#FFF7EA",
+    "bakery_white": "#FFFFFF",
+    "berry_accent": "#E94B7B"
   }
 }

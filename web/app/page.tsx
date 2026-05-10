@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import catalog from "@/data/catalog.json";
 
 export default function Home() {
@@ -46,10 +47,14 @@ export default function Home() {
               href={`/cakes/${cake.slug}`}
               className="group bg-cream-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow border border-hb-900/10"
             >
-              <div className="h-48 bg-hb-200/30 flex items-center justify-center">
-                <span className="text-6xl opacity-70">
-                  {cake.category === "cupcakes" ? "🧁" : "🎂"}
-                </span>
+              <div className="relative h-48 w-full bg-gradient-to-br from-sky/20 to-berry/10">
+                <Image
+                  src={cake.image}
+                  alt={cake.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
               </div>
               <div className="p-5">
                 <h3 className="font-display font-bold text-lg text-hb-900 group-hover:text-hb-500 transition-colors">
