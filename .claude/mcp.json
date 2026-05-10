@@ -3,7 +3,7 @@
     "happycake": {
       "url": "https://www.steppebusinessclub.com/api/mcp",
       "headers": {
-        "X-Team-Token": "sbc_team_33116908af933dfbefe6668e080cb542"
+        "X-Team-Token": "${TEAM_TOKEN}"
       }
     }
   }

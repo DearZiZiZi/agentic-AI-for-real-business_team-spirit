@@ -1,76 +1,50 @@
 {
+  "note": "Fallback catalog. Live data comes from square_list_catalog via MCP.",
   "items": [
     {
-      "id": "cake-001",
-      "name": "Classic Vanilla Cake",
-      "slug": "classic-vanilla",
-      "description": "Light and fluffy vanilla sponge with buttercream frosting",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 3500},
-        {"size": "8-inch (serves 12)", "price_cents": 4500},
-        {"size": "10-inch (serves 20)", "price_cents": 5500}
-      ]
+      "id": "sq_item_honey_cake_slice",
+      "variationId": "sq_var_honey_cake_slice",
+      "name": "Honey cake slice",
+      "category": "slices",
+      "priceCents": 850,
+      "description": "Individual honey cake slice for walk-ins and quick pickup.",
+      "kitchenProductId": "honey-cake-slice"
     },
     {
-      "id": "cake-002",
-      "name": "Chocolate Dream Cake",
-      "slug": "chocolate-dream",
-      "description": "Rich chocolate layers with ganache and chocolate buttercream",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 3800},
-        {"size": "8-inch (serves 12)", "price_cents": 4800},
-        {"size": "10-inch (serves 20)", "price_cents": 5800}
-      ]
+      "id": "sq_item_whole_honey_cake",
+      "variationId": "sq_var_whole_honey_cake",
+      "name": "Whole honey cake",
+      "category": "whole-cakes",
+      "priceCents": 5500,
+      "description": "Classic whole honey cake for family orders.",
+      "kitchenProductId": "whole-honey-cake"
     },
     {
-      "id": "cake-003",
-      "name": "Red Velvet Cake",
-      "slug": "red-velvet",
-      "description": "Classic red velvet with cream cheese frosting",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 3800},
-        {"size": "8-inch (serves 12)", "price_cents": 4800},
-        {"size": "10-inch (serves 20)", "price_cents": 5800}
-      ]
+      "id": "sq_item_pistachio_roll",
+      "variationId": "sq_var_pistachio_roll",
+      "name": "Pistachio roll",
+      "category": "slices",
+      "priceCents": 950,
+      "description": "Premium pistachio roll dessert.",
+      "kitchenProductId": "pistachio-roll"
     },
     {
-      "id": "cake-004",
-      "name": "Honey Cake",
-      "slug": "honey-cake",
-      "description": "Traditional honey cake with layers of honey-infused sponge and cream",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 4000},
-        {"size": "8-inch (serves 12)", "price_cents": 5200},
-        {"size": "10-inch (serves 20)", "price_cents": 6500}
-      ]
+      "id": "sq_item_custom_birthday_cake",
+      "variationId": "sq_var_custom_birthday_cake",
+      "name": "Custom birthday cake",
+      "category": "custom",
+      "priceCents": 9500,
+      "description": "Custom celebration cake with human approval required.",
+      "kitchenProductId": "custom-birthday-cake"
     },
     {
-      "id": "cupcake-001",
-      "name": "Assorted Cupcakes",
-      "slug": "assorted-cupcakes",
-      "description": "Mix of vanilla, chocolate, and red velvet cupcakes",
-      "category": "cupcakes",
-      "variations": [
-        {"size": "6-pack", "price_cents": 1800},
-        {"size": "12-pack", "price_cents": 3200},
-        {"size": "24-pack", "price_cents": 5800}
-      ]
-    },
-    {
-      "id": "cake-005",
-      "name": "Strawberry Shortcake",
-      "slug": "strawberry-shortcake",
-      "description": "Fresh strawberries with whipped cream and vanilla sponge",
-      "category": "cakes",
-      "variations": [
-        {"size": "6-inch (serves 8)", "price_cents": 4200},
-        {"size": "8-inch (serves 12)", "price_cents": 5400}
-      ]
+      "id": "sq_item_office_dessert_box",
+      "variationId": "sq_var_office_dessert_box",
+      "name": "Office dessert box",
+      "category": "catering",
+      "priceCents": 12000,
+      "description": "Assorted dessert box for offices and events.",
+      "kitchenProductId": "office-dessert-box"
     }
-  ],
-  "note": "This is a fallback catalog. Live data comes from square_list_catalog via MCP."
+  ]
 }

@@ -7,25 +7,26 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-sky/10 to-vanilla py-20">
+      <section className="bg-hb-900 text-cream-50 py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-chocolate mb-4">
-            Fresh Cakes, Made with Love
+          <h1 className="font-display text-5xl font-bold text-cream-50 mb-4">
+            The original taste of happiness.
           </h1>
-          <p className="text-xl text-chocolate/70 mb-8 max-w-2xl mx-auto">
-            Custom cakes, cupcakes, and desserts made to order in Sugar Land,
-            TX. From birthdays to weddings, we make every celebration sweeter.
+          <p className="text-lg text-cream-200 mb-8 max-w-2xl mx-auto font-body">
+            Real cakes, made by hand in our Sugar Land kitchen. Cake
+            &quot;Honey&quot;, cake &quot;Napoleon&quot;, cake &quot;Pistachio
+            Roll&quot; — same recipes, same taste your family remembers.
           </p>
           <div className="flex gap-4 justify-center">
             <Link
               href="/cakes"
-              className="bg-sky text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-sky/90 transition-colors"
+              className="bg-hb-700 text-cream-50 px-8 py-3 rounded text-lg font-body font-semibold hover:bg-hb-500 transition-colors"
             >
               Browse Our Cakes
             </Link>
             <Link
               href="/custom"
-              className="bg-berry text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-berry/90 transition-colors"
+              className="bg-coral text-cream-50 px-8 py-3 rounded text-lg font-body font-semibold hover:bg-coral/90 transition-colors"
             >
               Custom Orders
             </Link>
@@ -35,27 +36,29 @@ export default function Home() {
 
       {/* Featured */}
       <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-chocolate text-center mb-10">
-          Popular Picks
+        <h2 className="font-display text-3xl font-bold text-hb-900 text-center mb-10">
+          The classics
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featured.map((cake) => (
             <Link
               key={cake.id}
               href={`/cakes/${cake.slug}`}
-              className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              className="group bg-cream-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow border border-hb-900/10"
             >
-              <div className="h-48 bg-gradient-to-br from-sky/20 to-berry/10 flex items-center justify-center text-6xl">
-                🎂
+              <div className="h-48 bg-hb-200/30 flex items-center justify-center">
+                <span className="text-6xl opacity-70">
+                  {cake.category === "cupcakes" ? "🧁" : "🎂"}
+                </span>
               </div>
               <div className="p-5">
-                <h3 className="font-bold text-lg text-chocolate group-hover:text-sky transition-colors">
+                <h3 className="font-display font-bold text-lg text-hb-900 group-hover:text-hb-500 transition-colors">
                   {cake.name}
                 </h3>
-                <p className="text-sm text-chocolate/60 mt-1">
+                <p className="text-sm text-text/60 mt-1 font-body">
                   {cake.description}
                 </p>
-                <p className="text-sky font-semibold mt-3">
+                <p className="text-hb-700 font-body font-semibold mt-3">
                   From ${(cake.variations[0].price_cents / 100).toFixed(2)}
                 </p>
               </div>
@@ -65,42 +68,45 @@ export default function Home() {
         <div className="text-center mt-10">
           <Link
             href="/cakes"
-            className="text-sky font-semibold hover:underline"
+            className="text-hb-500 font-body font-semibold hover:underline"
           >
-            View All Cakes →
+            See the full menu
           </Link>
         </div>
       </section>
 
       {/* Why us */}
-      <section className="bg-white py-16">
+      <section className="bg-cream-100 py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-chocolate text-center mb-10">
-            Why Happy Cake?
+          <h2 className="font-display text-3xl font-bold text-hb-900 text-center mb-10">
+            Why HappyCake?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center font-body">
             <div className="p-6">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="font-bold text-lg mb-2">Custom Designs</h3>
-              <p className="text-chocolate/60 text-sm">
-                From simple elegance to elaborate themes — we bring your vision
-                to life.
+              <h3 className="font-semibold text-lg mb-2 text-hb-900">
+                Made by hand
+              </h3>
+              <p className="text-text/60 text-sm">
+                Every cake from scratch. No mixes. No shortcuts. The taste your
+                grandmother would recognise.
               </p>
             </div>
             <div className="p-6">
-              <div className="text-4xl mb-4">🌿</div>
-              <h3 className="font-bold text-lg mb-2">Fresh Ingredients</h3>
-              <p className="text-chocolate/60 text-sm">
-                Every cake made from scratch with quality ingredients, never
-                from a mix.
+              <h3 className="font-semibold text-lg mb-2 text-hb-900">
+                Real ingredients
+              </h3>
+              <p className="text-text/60 text-sm">
+                Carefully selected. Fresh butter, real cream, local eggs.
+                Quality you can taste in every layer.
               </p>
             </div>
             <div className="p-6">
-              <div className="text-4xl mb-4">💬</div>
-              <h3 className="font-bold text-lg mb-2">Easy Ordering</h3>
-              <p className="text-chocolate/60 text-sm">
-                Order online, via WhatsApp, Instagram DM, or chat with our AI
-                assistant right here.
+              <h3 className="font-semibold text-lg mb-2 text-hb-900">
+                Order anywhere
+              </h3>
+              <p className="text-text/60 text-sm">
+                On the site, WhatsApp, Instagram DM, or chat with our assistant
+                right here. Same cake, same care.
               </p>
             </div>
           </div>
@@ -108,20 +114,19 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-sky/5 py-16 text-center">
+      <section className="py-16 text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-chocolate mb-4">
-            Ready to Order?
+          <h2 className="font-display text-3xl font-bold text-hb-900 mb-4">
+            Ready to order?
           </h2>
-          <p className="text-chocolate/60 mb-6">
-            Click the chat icon in the bottom right to talk to our AI assistant,
-            or browse our catalog to find the perfect cake.
+          <p className="text-text/60 font-body mb-6">
+            Order on the site at happycake.us or send a message on WhatsApp.
           </p>
           <Link
             href="/cakes"
-            className="bg-berry text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-berry/90 transition-colors inline-block"
+            className="bg-hb-700 text-cream-50 px-8 py-3 rounded text-lg font-body font-semibold hover:bg-hb-500 transition-colors inline-block"
           >
-            Start Shopping
+            See the menu
           </Link>
         </div>
       </section>

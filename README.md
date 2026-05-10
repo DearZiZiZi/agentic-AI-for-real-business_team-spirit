@@ -1,6 +1,6 @@
-# Happy Cake US — Agentic Sales System
+# HappyCake US — Agentic Sales System
 
-End-to-end AI sales system for Happy Cake US (Sugar Land, TX). Built on the Steppe Business Club hackathon runtime: **Claude Code CLI (Opus 4.7) + Telegram + Cloudflare Tunnel + hosted MCP sandbox**.
+End-to-end AI sales system for HappyCake US (Sugar Land, TX). Built on the Steppe Business Club hackathon runtime: **Claude Code CLI (Opus 4.7) + Telegram + Cloudflare Tunnel + hosted MCP sandbox**.
 
 - Architecture → [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 - Build plan → [`IMPLEMENTATION_PLAN.md`](./IMPLEMENTATION_PLAN.md)
@@ -53,7 +53,7 @@ TUNNEL_PUBLIC_URL=<printed by `make start`>
 
 After `make start` you should see:
 
-- `http://localhost:3000` — the Happy Cake site
+- `http://localhost:3000` — the HappyCake website
 - `http://localhost:8080/health` — API health check
 - `https://<id>.trycloudflare.com` — public tunnel URL
 - `@hc_owner_bot` online in Telegram
@@ -133,15 +133,17 @@ System prompt is built from `data/brand.md`:
 - Approved claims: only what MCP returns. No "halal-certified" unless the data says so. No allergen guarantees beyond "made in a kitchen with nuts/dairy/eggs."
 - Refusal templates for medical claims, allergen guarantees, refunds.
 
-Visual assets from the official Happy Cake pack (logo + 22 optimized images). Brand colors:
+Visual assets from the official HappyCake pack (logo + 22 optimized images). Brand colors:
 
 | Color | Hex | Use |
 |---|---|---|
-| Happy Sky Blue | `#00AEEA` | Primary CTAs, accents |
-| Chocolate Brown | `#6B3A1E` | Wordmark, dessert cues |
-| Vanilla Cream | `#FFF7EA` | Backgrounds, cards |
-| Bakery White | `#FFFFFF` | Logo safe space |
-| Berry Accent | `#E94B7B` | Promo stickers |
+| Happy Blue 900 | `#0E2A3C` | Primary dark, hero, header |
+| Happy Blue 700 | `#1B4868` | Secondary dark |
+| Happy Blue 500 | `#3B7BA8` | Links, accents |
+| Cream 50 | `#FBF6E8` | Backgrounds, body |
+| Cream 100 | `#F4ECD3` | Cards |
+| Coral | `#E08066` | CTAs, promo stickers |
+| Green | `#6E9D74` | Success states |
 
 ---
 
@@ -214,10 +216,10 @@ make test-e2e        # full end-to-end against the simulator
 
 ## Production handoff
 
-[`PRODUCTION_HANDOFF.md`](./PRODUCTION_HANDOFF.md) lists the eight changes to ship to a real Happy Cake customer (real WhatsApp Cloud API, real Square credentials, real domain, etc.). Named, file-line referenced, no real code shipped.
+[`PRODUCTION_HANDOFF.md`](./PRODUCTION_HANDOFF.md) lists the eight changes to ship to a real HappyCake customer (real WhatsApp Cloud API, real Square credentials, real domain, etc.). Named, file-line referenced, no real code shipped.
 
 ---
 
 ## License
 
-Built on the Steppe Business Club hackathon runtime. Approved Happy Cake brand assets used under the hackathon brief license; do not redistribute outside this repo.
+Built on the Steppe Business Club hackathon runtime. Approved HappyCake brand assets used under the hackathon brief license; do not redistribute outside this repo.

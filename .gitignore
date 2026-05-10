@@ -11,3 +11,4 @@ web/out/
 dist/
 build/
 data/state.json
+.claude/mcp_runtime.json

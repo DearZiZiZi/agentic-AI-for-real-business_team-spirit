@@ -21,7 +21,7 @@ from api.prompts import (
 )
 from api.tiers import Tier, classify
 
-app = FastAPI(title="Happy Cake API", version="1.0.0")
+app = FastAPI(title="HappyCake API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,

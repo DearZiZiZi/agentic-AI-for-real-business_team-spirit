@@ -45,7 +45,7 @@ def owner_only(func):
 @owner_only
 async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🎂 Happy Cake Owner Bot\n\n"
+        "HappyCake Owner Bot\n\n"
         "Commands:\n"
         "/today — Daily briefing\n"
         "/inbox — Pending Tier-C items\n"
@@ -235,7 +235,7 @@ def main():
     app.add_handler(CallbackQueryHandler(handle_callback))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    logger.info("🎂 Happy Cake Owner Bot starting (long-polling)...")
+    logger.info("HappyCake Owner Bot starting (long-polling)...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 

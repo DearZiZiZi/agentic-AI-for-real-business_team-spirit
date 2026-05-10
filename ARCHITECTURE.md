@@ -1,4 +1,4 @@
-# Happy Cake — Architecture
+# HappyCake — Architecture
 
 Minimal, demo-ready system for the Steppe Business Club hackathon. One agent, one Telegram bot, one Python service, one Next.js website. No database, no queue, no orchestrator. The hackathon brief is the spec; everything below directly serves the seven judging passes.
 
@@ -170,7 +170,7 @@ Catalog data: `web/data/catalog.json` (snapshot fetched at build time from `squa
 
 On-site assistant: a small floating widget (vanilla React) bottom-right that POSTs to `/api/chat`. The website itself proxies through to the Python API via a Next.js rewrite (`/api/chat` → `http://localhost:8080/api/chat`).
 
-Brand colors from the asset metadata: `#00AEEA` (sky blue), `#6B3A1E` (chocolate), `#FFF7EA` (vanilla cream), `#E94B7B` (berry).
+Brand colors from the brandbook: `#0E2A3C` (happy-blue 900), `#1B4868` (happy-blue 700), `#FBF6E8` (cream 50), `#E08066` (coral).
 
 ### 6.7 Agent project (`.claude/`)
 

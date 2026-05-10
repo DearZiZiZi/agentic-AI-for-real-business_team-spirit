@@ -40,53 +40,67 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       <Link
         href="/cakes"
-        className="text-sky hover:underline text-sm mb-6 inline-block"
+        className="text-hb-500 hover:underline text-sm font-body mb-6 inline-block"
       >
-        ← Back to All Cakes
+        ← Back to all cakes
       </Link>
 
-      <div className="bg-white rounded-xl shadow-md overflow-hidden">
-        <div className="h-64 bg-gradient-to-br from-sky/20 to-berry/10 flex items-center justify-center text-8xl">
-          {cake.category === "cupcakes" ? "🧁" : "🎂"}
+      <div className="bg-cream-100 rounded-xl overflow-hidden border border-hb-900/10">
+        <div className="h-64 bg-hb-200/30 flex items-center justify-center">
+          <span className="text-8xl opacity-70">
+            {cake.category === "custom"
+              ? "🎨"
+              : cake.category === "catering"
+                ? "📦"
+                : "🎂"}
+          </span>
         </div>
 
         <div className="p-8">
           <div className="flex justify-between items-start mb-4">
-            <h1 className="text-3xl font-bold text-chocolate">{cake.name}</h1>
-            <span className="bg-sky/10 text-sky px-3 py-1 rounded-full text-sm capitalize">
+            <h1 className="font-display text-3xl font-bold text-hb-900">
+              {cake.name}
+            </h1>
+            <span className="bg-hb-200/50 text-hb-700 px-3 py-1 rounded text-sm font-body uppercase tracking-wider">
               {cake.category}
             </span>
           </div>
 
-          <p className="text-chocolate/70 text-lg mb-8">{cake.description}</p>
+          <p className="text-text/70 text-lg font-body mb-8">
+            {cake.description}
+          </p>
 
-          <h2 className="text-xl font-bold text-chocolate mb-4">
-            Sizes & Pricing
+          <h2 className="font-display text-xl font-bold text-hb-900 mb-4">
+            Sizes and pricing
           </h2>
           <div className="space-y-3 mb-8">
             {cake.variations.map((v, i) => (
               <div
                 key={i}
-                className="flex justify-between items-center p-4 bg-vanilla rounded-lg"
+                className="flex justify-between items-center p-4 bg-cream-50 rounded border border-hb-900/5"
               >
-                <span className="font-medium text-chocolate">{v.size}</span>
-                <span className="text-xl font-bold text-sky">
+                <span className="font-body font-medium text-text">
+                  {v.size}
+                </span>
+                <span className="text-xl font-body font-bold text-hb-700">
                   ${(v.price_cents / 100).toFixed(2)}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="bg-sky/5 rounded-lg p-6 mb-6">
-            <h3 className="font-bold text-chocolate mb-2">How to Order</h3>
-            <p className="text-chocolate/70 text-sm">
-              Click the chat icon in the bottom right corner to order this cake
-              through our AI assistant, or contact us via WhatsApp or Instagram
-              DM. Orders require at least 48 hours advance notice.
+          <div className="bg-hb-200/20 rounded p-6 mb-6 border border-hb-200/40">
+            <h3 className="font-body font-bold text-hb-900 mb-2">
+              How to order
+            </h3>
+            <p className="text-text/70 text-sm font-body">
+              Order on the site at happycake.us or send a message on WhatsApp.
+              You can also use the chat assistant (bottom right) to place an
+              order directly. Standard items: 24 hours advance notice.
             </p>
           </div>
 
-          <div className="text-xs text-chocolate/50 p-4 bg-vanilla/50 rounded-lg">
+          <div className="text-xs text-text/50 p-4 bg-cream-50 rounded font-body border border-hb-900/5">
             <strong>Allergen notice:</strong> Our cakes are made in a kitchen
             that handles nuts, dairy, eggs, wheat, and soy. We cannot guarantee
             an allergen-free environment.

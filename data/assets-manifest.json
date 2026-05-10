@@ -17,10 +17,12 @@
     "facebook": "web/public/brand/social-fb.jpg"
   },
   "colors": {
-    "sky_blue": "#00AEEA",
-    "chocolate_brown": "#6B3A1E",
-    "vanilla_cream": "#FFF7EA",
-    "white": "#FFFFFF",
-    "berry_accent": "#E94B7B"
+    "happy_blue_900": "#0E2A3C",
+    "happy_blue_700": "#1B4868",
+    "happy_blue_500": "#3B7BA8",
+    "cream_50": "#FBF6E8",
+    "cream_100": "#F4ECD3",
+    "coral": "#E08066",
+    "green": "#6E9D74"
   }
 }

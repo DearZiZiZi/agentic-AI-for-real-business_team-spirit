@@ -1,4 +1,4 @@
-# Happy Cake — Implementation Plan
+# HappyCake — Implementation Plan
 
 Hour-by-hour build plan from the time you start coding to the deadline. Designed for one builder; doubles up if there are two of you. Every step ends with a checkable artifact so you can stop early without losing the demo.
 
@@ -106,7 +106,7 @@ Hour-by-hour build plan from the time you start coding to the deadline. Designed
 
 ### 4.1 Next.js scaffolding (45 min)
 
-- [ ] `web/app/layout.tsx`, `web/app/page.tsx` — hero with brand colors `#00AEEA`/`#6B3A1E`/`#FFF7EA`/`#E94B7B`, hero image from the asset pack
+- [ ] `web/app/layout.tsx`, `web/app/page.tsx` — hero with brand colors `#0E2A3C`/`#1B4868`/`#FBF6E8`/`#E08066`, hero image from the asset pack
 - [ ] `web/app/cakes/page.tsx` — catalog grid pulling from `web/data/catalog.json` (snapshot from `square_list_catalog`)
 - [ ] `web/app/cakes/[slug]/page.tsx` — product page with JSON-LD `Product`/`Offer`
 - [ ] `web/app/custom/page.tsx`, `web/app/policies/page.tsx`, `web/app/about/page.tsx`
