@@ -2,6 +2,8 @@
 
 > **[Steppe Business Club Hackathon](https://www.steppebusinessclub.com/hackathon)**
 
+> Full 100% AI judging is unreliable because the judge (Claude 4.7) failed to verify whether the system actually works or is ready for production. Instead, it was triggered simply by the high number of agents used, even though the system was non-functional. This happened either because the judging system prompt was poorly configured or because Claude 4.7 lacks sufficient reasoning skills, as shown in top dynamic reasoning benchmarks.
+
 End-to-end AI sales system for HappyCake US (Sugar Land, TX). Built on the Steppe Business Club hackathon runtime: **Claude Code CLI (Opus 4.7) + Telegram + Cloudflare Tunnel + hosted MCP sandbox**.
 
 - Architecture → [`ARCHITECTURE.md`](./ARCHITECTURE.md)
@@ -34,7 +36,7 @@ Brief explicitly allows a single super-agent. We use that to ship.
 ### Run
 
 ```bash
-git clone https://github.com/<your-team>/happycake
+git clone https://github.com/DearZiZiZi/agentic-AI-for-real-business_team-spirit.git
 cd happycake
 make setup            # python venv + node deps
 cp .env.example .env  # then fill the 5 required values below
